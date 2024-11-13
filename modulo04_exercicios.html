@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Números Decimais e Frações</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.8;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h3 {
+            color: #0056b3;
+        }
+        .exercise {
+            margin-bottom: 30px;
+        }
+        .exercise h3 {
+            margin-bottom: 10px;
+        }
+        .question {
+            background-color: #eaf3fc;
+            padding: 15px;
+            border-left: 4px solid #0056b3;
+            margin-bottom: 10px;
+        }
+        .solution {
+            background-color: #d4edda;
+            padding: 15px;
+            border-left: 4px solid #28a745;
+            display: none;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #0056b3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #004494;
+        }
+    </style>
+</head>
+<body>
+    
+	<div class="exercise">
+    <h3>Exercício 1: Divisão de Pizza</h3>
+    <div class="question">
+        <strong>1. Uma pizzaria vende uma pizza dividida em 8 fatias. Se um cliente consome 5 fatias, que fração da pizza ele consumiu?</strong>
+        <ul>
+            <li><input type="radio" name="q1" id="q1a" value="a"> a) \( \frac{5}{8} \)</li>
+            <li><input type="radio" name="q1" id="q1b" value="b"> b) \( \frac{3}{8} \)</li>
+            <li><input type="radio" name="q1" id="q1c" value="c"> c) \( \frac{1}{2} \)</li>
+            <li><input type="radio" name="q1" id="q1d" value="d"> d) \( \frac{7}{8} \)</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(1)">Ver Resolução</a>
+    <div id="solution-1" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            A fração consumida é dada pelo número de fatias consumidas dividido pelo total de fatias: <br>
+            \( \frac{5}{8} \). <br>
+			 Resposta correta: \(  \frac{5}{8} \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 2: Receita de Bolo</h3>
+    <div class="question">
+        <strong>2. Uma receita de bolo requer \( \frac{3}{4} \) de uma xícara de açúcar e \( \frac{2}{3} \) de uma xícara de leite. Qual é a quantidade total de ingredientes líquidos necessários?</strong>
+        <ul>
+            <li><input type="radio" name="q2" id="q2a" value="a"> a) \( \frac{17}{12} \) xícara</li>
+            <li><input type="radio" name="q2" id="q2b" value="b"> b) \( \frac{9}{12} \) xícara</li>
+            <li><input type="radio" name="q2" id="q2c" value="c"> c) \( \frac{5}{6} \) xícara</li>
+            <li><input type="radio" name="q2" id="q2d" value="d"> d) \( 1 \frac{1}{12} \) xícara</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(2)">Ver Resolução</a>
+    <div id="solution-2" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Para somar as frações, reduza ao mesmo denominador: <br>
+            \( \frac{3}{4} + \frac{2}{3} = \frac{9}{12} + \frac{8}{12} = \frac{17}{12} \). <br>
+            Resposta correta: \(  \frac{17}{12} \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 3: Caminhada</h3>
+    <div class="question">
+        <strong>3. Um atleta completou \( \frac{2}{5} \) de um percurso de 10 km e depois parou para descansar. Quantos quilômetros ele já percorreu?</strong>
+        <ul>
+            <li><input type="radio" name="q3" id="q3a" value="a"> a) 4 km</li>
+            <li><input type="radio" name="q3" id="q3b" value="b"> b) 2 km</li>
+            <li><input type="radio" name="q3" id="q3c" value="c"> c) 5 km</li>
+            <li><input type="radio" name="q3" id="q3d" value="d"> d) 6 km</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(3)">Ver Resolução</a>
+    <div id="solution-3" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Multiplique a fração pelo total do percurso: <br>
+            \( \frac{2}{5} \times 10 = \frac{20}{5} = 4 \, \text{km}. \) <br>
+            Resposta correta: \( \  4 km\).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 4: Divisão de Dinheiro</h3>
+    <div class="question">
+        <strong>4. Três amigos dividiram igualmente R$ 45,00. Quanto cada um recebeu?</strong>
+        <ul>
+            <li><input type="radio" name="q4" id="q4a" value="a"> a) R$ 15,00</li>
+            <li><input type="radio" name="q4" id="q4b" value="b"> b) R$ 20,00</li>
+            <li><input type="radio" name="q4" id="q4c" value="c"> c) R$ 12,50</li>
+            <li><input type="radio" name="q4" id="q4d" value="d"> d) R$ 10,00</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(4)">Ver Resolução</a>
+    <div id="solution-4" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Divida o valor total pelo número de pessoas: <br>
+            \( 45 \div 3 = 15 \, \text{reais}. \) <br>
+            Resposta correta: \( \  R$ 15,00 \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 5: Promoção de Lojas</h3>
+    <div class="question">
+        <strong>5. Uma loja oferece \( \frac{1}{5} \) de desconto no preço original de R$ 250,00. Qual é o valor do desconto e o preço final?</strong>
+        <ul>
+            <li><input type="radio" name="q5" id="q5a" value="a"> a) R$ 50,00; R$ 200,00</li>
+            <li><input type="radio" name="q5" id="q5b" value="b"> b) R$ 40,00; R$ 210,00</li>
+            <li><input type="radio" name="q5" id="q5c" value="c"> c) R$ 30,00; R$ 220,00</li>
+            <li><input type="radio" name="q5" id="q5d" value="d"> d) R$ 60,00; R$ 190,00</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(5)">Ver Resolução</a>
+    <div id="solution-5" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Calcule o desconto: <br>
+            \( \frac{1}{5} \times 250 = 50 \, \text{reais}. \) <br>
+            Subtraia do preço original: <br>
+            \( 250 - 50 = 200 \, \text{reais}. \) <br>
+            Resposta correta: \( \  R$ 50,00; R$ 200,00 \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 6: Repartição de Terreno</h3>
+    <div class="question">
+        <strong>6. Um fazendeiro deseja dividir igualmente um terreno de 6 hectares entre seus 4 filhos. Qual será a fração que cada filho receberá e o tamanho do terreno em hectares?</strong>
+        <ul>
+            <li><input type="radio" name="q6" id="q6a" value="a"> a) \( \frac{1}{6}; 1,5 \, \text{hectares} \)</li>
+            <li><input type="radio" name="q6" id="q6b" value="b"> b) \( \frac{1}{4}; 1,5 \, \text{hectares} \)</li>
+            <li><input type="radio" name="q6" id="q6c" value="c"> c) \( \frac{1}{4}; 2 \, \text{hectares} \)</li>
+            <li><input type="radio" name="q6" id="q6d" value="d"> d) \( \frac{1}{3}; 2 \, \text{hectares} \)</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(6)">Ver Resolução</a>
+    <div id="solution-6" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Cada filho receberá \( \frac{1}{4} \) do total de 6 hectares. Multiplicando: <br>
+            \( \frac{1}{4} \times 6 = 1,5 \, \text{hectares}. \) <br>
+            Resposta correta: \(  \frac{1}{4}; 1,5 \, \text{hectares} \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 7: Distribuição de Doces</h3>
+    <div class="question">
+        <strong>7. Um pacote contém 36 doces. Maria deu \( \frac{2}{9} \) dos doces a João e \( \frac{1}{3} \) a Ana. Quantos doces Maria ainda tem?</strong>
+        <ul>
+            <li><input type="radio" name="q7" id="q7a" value="a"> a) 18 doces</li>
+            <li><input type="radio" name="q7" id="q7b" value="b"> b) 12 doces</li>
+            <li><input type="radio" name="q7" id="q7c" value="c"> c) 16 doces</li>
+            <li><input type="radio" name="q7" id="q7d" value="d"> d) 14 doces</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(7)">Ver Resolução</a>
+    <div id="solution-7" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Calcule os doces dados a João: <br>
+            \( \frac{2}{9} \times 36 = 8 \, \text{doces}. \) <br>
+            Calcule os doces dados a Ana: <br>
+            \( \frac{1}{3} \times 36 = 12 \, \text{doces}. \) <br>
+            Restam: \( 36 - 8 - 12 = 16 \, \text{doces}. \) <br>
+            Resposta correta: \( \textbf{c) 16 doces} \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 8: Economia no Mercado</h3>
+    <div class="question">
+        <strong>8. Em uma promoção, o preço de um quilo de maçã foi reduzido para \( \frac{3}{4} \) do preço original de R$ 12,00. Qual é o novo preço?</strong>
+        <ul>
+            <li><input type="radio" name="q8" id="q8a" value="a"> a) R$ 8,00</li>
+            <li><input type="radio" name="q8" id="q8b" value="b"> b) R$ 9,00</li>
+            <li><input type="radio" name="q8" id="q8c" value="c"> c) R$ 7,50</li>
+            <li><input type="radio" name="q8" id="q8d" value="d"> d) R$ 10,00</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(8)">Ver Resolução</a>
+    <div id="solution-8" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Multiplique o preço original pela fração: <br>
+            \( \frac{3}{4} \times 12 = 9 \, \text{reais}. \) <br>
+            Resposta correta: \(  R$ 9,00 \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 9: Consumo de Combustível</h3>
+    <div class="question">
+        <strong>9. Um carro consome \( \frac{2}{3} \) de um tanque de combustível para percorrer 300 km. Quantos quilômetros ele pode percorrer com um tanque cheio?</strong>
+        <ul>
+            <li><input type="radio" name="q9" id="q9a" value="a"> a) 450 km</li>
+            <li><input type="radio" name="q9" id="q9b" value="b"> b) 600 km</li>
+            <li><input type="radio" name="q9" id="q9c" value="c"> c) 500 km</li>
+            <li><input type="radio" name="q9" id="q9d" value="d"> d) 400 km</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(9)">Ver Resolução</a>
+    <div id="solution-9" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Para calcular a distância com um tanque cheio, divida 300 por \( \frac{2}{3} \): <br>
+            \( 300 \div \frac{2}{3} = 300 \times \frac{3}{2} = 450 \, \text{km}. \) <br>
+            Resposta correta: \( \textbf{a) 450 km} \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 10: Receita Compartilhada</h3>
+    <div class="question">
+        <strong>10. Uma receita rende \( \frac{3}{5} \) de uma forma grande de bolo. Quantas formas completas serão necessárias para fazer a receita 10 vezes?</strong>
+        <ul>
+            <li><input type="radio" name="q10" id="q10a" value="a"> a) 5 formas</li>
+            <li><input type="radio" name="q10" id="q10b" value="b"> b) 6 formas</li>
+            <li><input type="radio" name="q10" id="q10c" value="c"> c) 8 formas</li>
+            <li><input type="radio" name="q10" id="q10d" value="d"> d) 9 formas</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(10)">Ver Resolução</a>
+    <div id="solution-10" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Multiplique \( \frac{3}{5} \) por 10 e arredonde para cima: <br>
+            \( \frac{3}{5} \times 10 = 6 \, \text{formas completas}. \) <br>
+            Resposta correta: \( \textbf{b) 6 formas} \).
+        </p>
+    </div>
+</div>
+	
+	
+	
+	
+	<div class="exercise">
+    <h3>Exercício 11: Área Pintada</h3>
+    <div class="question">
+        <strong>11. Um pintor usou \( \frac{2}{3} \) de uma lata de tinta para pintar 40 m² de parede. Quantos metros quadrados ele pode pintar com uma lata inteira?</strong>
+        <ul>
+            <li><input type="radio" name="q11" id="q11a" value="a"> a) 50 m²</li>
+            <li><input type="radio" name="q11" id="q11b" value="b"> b) 60 m²</li>
+            <li><input type="radio" name="q11" id="q11c" value="c"> c) 80 m²</li>
+            <li><input type="radio" name="q11" id="q11d" value="d"> d) 70 m²</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(11)">Ver Resolução</a>
+    <div id="solution-11" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Para calcular a área pintada com uma lata inteira, divida 40 por \( \frac{2}{3} \): <br>
+            \( 40 \div \frac{2}{3} = 40 \times \frac{3}{2} = 60 \, \text{m²}. \) <br>
+            Resposta correta: \( \textbf{b) 60 m²} \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 12: Divisão de Lucro</h3>
+    <div class="question">
+        <strong>12. Três amigos dividiram igualmente um lucro de \( \frac{2}{3} \) de R$ 540,00. Quanto cada um recebeu?</strong>
+        <ul>
+            <li><input type="radio" name="q12" id="q12a" value="a"> a) R$ 100,00</li>
+            <li><input type="radio" name="q12" id="q12b" value="b"> b) R$ 120,00</li>
+            <li><input type="radio" name="q12" id="q12c" value="c"> c) R$ 90,00</li>
+            <li><input type="radio" name="q12" id="q12d" value="d"> d) R$ 80,00</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(12)">Ver Resolução</a>
+    <div id="solution-12" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Primeiro, calcule o lucro dividido entre os amigos: <br>
+            \( \frac{2}{3} \times 540 = 360 \, \text{reais}. \) <br>
+            Dividindo igualmente: \( 360 \div 3 = 120 \, \text{reais por pessoa}. \) <br>
+            Resposta correta: \( \ R$ 120,00 \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 13: Receita de Sopa</h3>
+    <div class="question">
+        <strong>13. Uma receita de sopa requer \( \frac{3}{4} \) de um litro de caldo por porção. Quantos litros de caldo são necessários para servir 8 porções?</strong>
+        <ul>
+            <li><input type="radio" name="q13" id="q13a" value="a"> a) 6 litros</li>
+            <li><input type="radio" name="q13" id="q13b" value="b"> b) 7 litros</li>
+            <li><input type="radio" name="q13" id="q13c" value="c"> c) 5 litros</li>
+            <li><input type="radio" name="q13" id="q13d" value="d"> d) 8 litros</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(13)">Ver Resolução</a>
+    <div id="solution-13" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Multiplique \( \frac{3}{4} \) por 8 para encontrar a quantidade total de caldo: <br>
+            \( \frac{3}{4} \times 8 = 6 \, \text{litros}. \) <br>
+            Resposta correta: \( \textbf{a) 6 litros} \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 14: Comparação de Preços</h3>
+    <div class="question">
+        <strong>14. Um quilo de carne custa \( \frac{5}{8} \) do preço de um quilo de peixe. Se o quilo do peixe custa R$ 64,00, qual é o preço de um quilo de carne?</strong>
+        <ul>
+            <li><input type="radio" name="q14" id="q14a" value="a"> a) R$ 32,00</li>
+            <li><input type="radio" name="q14" id="q14b" value="b"> b) R$ 40,00</li>
+            <li><input type="radio" name="q14" id="q14c" value="c"> c) R$ 48,00</li>
+            <li><input type="radio" name="q14" id="q14d" value="d"> d) R$ 36,00</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(14)">Ver Resolução</a>
+    <div id="solution-14" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Multiplique o preço do peixe pela fração para encontrar o preço da carne: <br>
+            \( \frac{5}{8} \times 64 = 40 \, \text{reais}. \) <br>
+            Resposta correta: \( \ R$ 40,00 \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 15: Fração de um Volume</h3>
+    <div class="question">
+        <strong>15. Uma caixa contém 24 litros de suco. Maria serviu \( \frac{1}{3} \) do conteúdo. Quantos litros ainda restam na caixa?</strong>
+        <ul>
+            <li><input type="radio" name="q15" id="q15a" value="a"> a) 12 litros</li>
+            <li><input type="radio" name="q15" id="q15b" value="b"> b) 16 litros</li>
+            <li><input type="radio" name="q15" id="q15c" value="c"> c) 18 litros</li>
+            <li><input type="radio" name="q15" id="q15d" value="d"> d) 20 litros</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(15)">Ver Resolução</a>
+    <div id="solution-15" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Primeiro, calcule o volume servido: <br>
+            \( \frac{1}{3} \times 24 = 8 \, \text{litros}. \) <br>
+            Restam: \( 24 - 8 = 16 \, \text{litros}. \) <br>
+            Resposta correta: \( \textbf{b) 16 litros} \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 16: Comparação de Alturas</h3>
+    <div class="question">
+        <strong>16. João mede \( \frac{5}{6} \) da altura de Carlos. Se Carlos mede 180 cm, qual é a altura de João?</strong>
+        <ul>
+            <li><input type="radio" name="q16" id="q16a" value="a"> a) 140 cm</li>
+            <li><input type="radio" name="q16" id="q16b" value="b"> b) 150 cm</li>
+            <li><input type="radio" name="q16" id="q16c" value="c"> c) 160 cm</li>
+            <li><input type="radio" name="q16" id="q16d" value="d"> d) 170 cm</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(16)">Ver Resolução</a>
+    <div id="solution-16" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Multiplique a altura de Carlos pela fração: <br>
+            \( \frac{5}{6} \times 180 = 150 \, \text{cm}. \) <br>
+            Resposta correta: \( \textbf{b) 150 cm} \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 17: Combustível Restante</h3>
+    <div class="question">
+        <strong>17. Um carro tem um tanque de combustível com capacidade para 60 litros. Após uma viagem, restam \( \frac{1}{4} \) do tanque. Quantos litros de combustível ainda estão no tanque?</strong>
+        <ul>
+            <li><input type="radio" name="q17" id="q17a" value="a"> a) 10 litros</li>
+            <li><input type="radio" name="q17" id="q17b" value="b"> b) 12 litros</li>
+            <li><input type="radio" name="q17" id="q17c" value="c"> c) 15 litros</li>
+            <li><input type="radio" name="q17" id="q17d" value="d"> d) 20 litros</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(17)">Ver Resolução</a>
+    <div id="solution-17" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Multiplique a capacidade total do tanque pela fração restante: <br>
+            \( \frac{1}{4} \times 60 = 15 \, \text{litros}. \) <br>
+            Resposta correta: \( \textbf{c) 15 litros} \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 18: Divisão de Doces</h3>
+    <div class="question">
+        <strong>18. Uma caixa contém 36 doces. Um grupo de amigos comeu \( \frac{2}{3} \) dos doces. Quantos doces ainda restam na caixa?</strong>
+        <ul>
+            <li><input type="radio" name="q18" id="q18a" value="a"> a) 10 doces</li>
+            <li><input type="radio" name="q18" id="q18b" value="b"> b) 12 doces</li>
+            <li><input type="radio" name="q18" id="q18c" value="c"> c) 24 doces</li>
+            <li><input type="radio" name="q18" id="q18d" value="d"> d) 14 doces</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(18)">Ver Resolução</a>
+    <div id="solution-18" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Primeiro, calcule os doces consumidos: <br>
+            \( \frac{2}{3} \times 36 = 24 \, \text{doces}. \) <br>
+            Doces restantes: \( 36 - 24 = 12 \, \text{doces}. \) <br>
+            Resposta correta: \( \textbf{b) 12 doces} \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 19: Preço de Entrada</h3>
+    <div class="question">
+        <strong>19. O preço de um ingresso de cinema foi reduzido em \( \frac{1}{5} \). Se o preço original era R$ 50,00, qual é o novo preço do ingresso?</strong>
+        <ul>
+            <li><input type="radio" name="q19" id="q19a" value="a"> a) R$ 40,00</li>
+            <li><input type="radio" name="q19" id="q19b" value="b"> b) R$ 35,00</li>
+            <li><input type="radio" name="q19" id="q19c" value="c"> c) R$ 38,00</li>
+            <li><input type="radio" name="q19" id="q19d" value="d"> d) R$ 45,00</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(19)">Ver Resolução</a>
+    <div id="solution-19" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Primeiro, calcule o desconto: <br>
+            \( \frac{1}{5} \times 50 = 10 \, \text{reais}. \) <br>
+            Subtraia o desconto do preço original: \( 50 - 10 = 40 \, \text{reais}. \) <br>
+            Resposta correta: \( \  R$ 40,00  \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 20: Comparação de Gastos</h3>
+    <div class="question">
+        <strong>20. Em um mercado, 2 kg de maçãs custam \( \frac{3}{4} \) do preço de 3 kg de laranjas. Se 3 kg de laranjas custam R$ 48,00, qual é o preço de 2 kg de maçãs?</strong>
+        <ul>
+            <li><input type="radio" name="q20" id="q20a" value="a"> a) R$ 24,00</li>
+            <li><input type="radio" name="q20" id="q20b" value="b"> b) R$ 30,00</li>
+            <li><input type="radio" name="q20" id="q20c" value="c"> c) R$ 36,00</li>
+            <li><input type="radio" name="q20" id="q20d" value="d"> d) R$ 28,00</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(20)">Ver Resolução</a>
+    <div id="solution-20" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Multiplique o preço das laranjas pela fração para encontrar o preço das maçãs: <br>
+            \( \frac{3}{4} \times 48 = 36 \, \text{reais}. \) <br>
+            Resposta correta: \( \  R$ 36,00  \).
+        </p>
+    </div>
+</div>
+
+
+
+
+<div style="text-align: center; margin: 20px 0;">
+    <button class="btn" onclick="revealAllSolutions()">Mostrar Todas as Resoluções</button>
+</div>
+
+
+
+
+
+
+    <script>
+		function revealAllSolutions() {
+    for (let i = 1; i <= 47; i++) {
+        const solution = document.getElementById(`solution-${i}`);
+        if (solution) {
+            solution.style.display = "block";
+        }
+    }
+}
+	
+        function toggleSolution(id) {
+            const solution = document.getElementById(`solution-${id}`);
+            solution.style.display = solution.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>

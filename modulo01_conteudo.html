@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 1: Números Naturais</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+        p, li {
+            margin-bottom: 15px;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        strong {
+            color: #333;
+        }
+        .formula {
+            background-color: #fff;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .dica {
+            background-color: #e7f5ff;
+            border-left: 6px solid #0056b3;
+            padding: 10px 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .dica strong {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Módulo 1: Números Naturais</h1>
+
+    <!-- Definição -->
+    <div class="section">
+        <h2>Definição</h2>
+        <p>Os números naturais são utilizados para contar objetos e ordenar elementos. O conjunto é representado por:</p>
+        <div class="formula">
+            $$N = \{0, 1, 2, 3, 4, 5, \dots\}$$
+        </div>
+        <p><strong>Observação:</strong> Quando o zero é excluído, o conjunto é chamado de <strong>Números Naturais Não-Nulos</strong> e representado por:</p>
+        <div class="formula">
+            $$N^* = \{1, 2, 3, 4, \dots\}$$
+        </div>
+    </div>
+
+    <!-- Propriedades Importantes -->
+    <div class="section">
+        <h2>Propriedades Importantes</h2>
+        <ul>
+            <li><strong>Fechamento:</strong> A soma e o produto de dois números naturais sempre resultam em outro número natural.</li>
+            <li><strong>Zero:</strong>
+                <ul>
+                    <li><strong>Elemento neutro na adição:</strong> \( n + 0 = n \).</li>
+                    <li><strong>Divisão:</strong> Não é usado como divisor; divisão por zero é indefinida.</li>
+                </ul>
+            </li>
+            <li><strong>Ordem:</strong> Sempre crescente; não existem números negativos no conjunto \( N \).</li>
+        </ul>
+    </div>
+
+    <!-- Adição -->
+    <div class="section">
+        <h2>Adição</h2>
+        <p><strong>Regra:</strong> A soma de dois números naturais resulta em outro número natural:</p>
+        <div class="formula">
+            $$a + b = c, \quad \text{onde } a, b, c \in N$$
+        </div>
+        <div class="dica">
+            <strong>Dica da Tia Querzia Paula:</strong> Desmembre os números grandes em partes menores para facilitar o cálculo.
+            <p><strong>Exemplo:</strong> \( 457 + 328 \)</p>
+            <p>
+                Quebrando os números: \( 457 = 400 + 50 + 7 \) e \( 328 = 300 + 20 + 8 \).<br>
+                Some parte a parte: \( 400 + 300 = 700 \), \( 50 + 20 = 70 \), \( 7 + 8 = 15 \).<br>
+                <strong>Resultado:</strong> \( 700 + 70 + 15 = 785 \).
+            </p>
+        </div>
+        <div class="dica">
+            <strong>Dica da Tia Querzia Paula:</strong> Use arredondamento e ajuste para simplificar somas.
+            <p><strong>Exemplo:</strong> \( 996 + 478 \)</p>
+            <p>
+                Arredonde \( 996 \) para \( 1000 \):<br>
+                \( 1000 + 478 = 1478 \).<br>
+                Subtraia o excesso: \( 1478 - 4 = 1474 \).<br>
+                <strong>Resultado:</strong> \( 1474 \).
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+<body>
+    <!-- Subtração -->
+    <div class="section">
+        <h2>Subtração</h2>
+        <p><strong>Regra:</strong> A subtração \( a - b \) só é possível se \( a \geq b \).</p>
+        <div class="dica">
+            <strong>Dica da Tia Querzia Paula:</strong> Use desmembramento para facilitar subtrações grandes.
+            <p><strong>Exemplo:</strong> \( 823 - 547 \)</p>
+            <p>
+                Quebrando os números: \( 823 = 800 + 20 + 3 \) e \( 547 = 500 + 40 + 7 \).<br>
+                Subtraia parte a parte: \( 800 - 500 = 300 \), \( 20 - 40 = -20 \) (ajuste para \( 300 - 20 = 280 \)), \( 3 - 7 = -4 \) (ajuste para \( 280 - 4 = 276 \)).<br>
+                <strong>Resultado:</strong> \( 276 \).
+            </p>
+        </div>
+        <div class="dica">
+            <strong>Dica da Tia Querzia Paula:</strong> Utilize arredondamento para cálculos mais rápidos.
+            <p><strong>Exemplo:</strong> \( 1004 - 638 \)</p>
+            <p>
+                Arredonde \( 638 \) para \( 640 \):<br>
+                \( 1004 - 640 = 364 \).<br>
+                Ajuste: \( 364 + 2 = 366 \).<br>
+                <strong>Resultado:</strong> \( 366 \).
+            </p>
+        </div>
+    </div>
+
+    <!-- Multiplicação -->
+    <div class="section">
+        <h2>Multiplicação</h2>
+        <p><strong>Regra:</strong> Multiplicar é somar repetidamente:</p>
+        <div class="formula">
+            $$a \times b = c, \quad \text{onde } a, b, c \in N$$
+        </div>
+        <div class="dica">
+            <strong>Dica da Tia Querzia Paula:</strong> Divida a multiplicação em partes menores para facilitar.
+            <p><strong>Exemplo:</strong> \( 37 \times 46 \)</p>
+            <p>
+                Quebre o cálculo: \( 37 \times (40 + 6) \).<br>
+                \( 37 \times 40 = 1480 \) e \( 37 \times 6 = 222 \).<br>
+                <strong>Resultado:</strong> \( 1480 + 222 = 1702 \).
+            </p>
+        </div>
+        <div class="dica">
+            <strong>Dica da Tia Querzia Paula:</strong> Use aproximação para cálculos mentais.
+            <p><strong>Exemplo:</strong> \( 198 \times 37 \)</p>
+            <p>
+                Arredonde \( 198 \) para \( 200 \):<br>
+                \( 200 \times 37 = 7400 \).<br>
+                Ajuste: Subtraia \( 2 \times 37 = 74 \).<br>
+                <strong>Resultado:</strong> \( 7400 - 74 = 7326 \).
+            </p>
+        </div>
+    </div>
+</body>
+<body>
+    <!-- Divisão -->
+    <div class="section">
+        <h2>Divisão</h2>
+        <p><strong>Regra:</strong> Divisão é repartir um número em partes iguais:</p>
+        <div class="formula">
+            $$a \div b = q, \quad \text{onde } b \neq 0$$
+        </div>
+        <div class="dica">
+            <strong>Dica da Tia Querzia Paula:</strong> Use aproximações para divisões difíceis.
+            <p><strong>Exemplo:</strong> \( 432 \div 12 \)</p>
+            <p>
+                Sabemos que \( 12 \times 36 = 432 \).<br>
+                <strong>Resultado:</strong> \( 36 \).
+            </p>
+        </div>
+        <div class="dica">
+            <strong>Dica da Tia Querzia Paula:</strong> Para divisões longas, faça passo a passo.
+            <p><strong>Exemplo:</strong> \( 2596 \div 24 \)</p>
+            <p>
+                Verifique quantas vezes \( 24 \) cabe nos primeiros dígitos: \( 259 \).<br>
+                \( 24 \times 10 = 240 \), sobrando \( 19 \).<br>
+                Traga o próximo dígito: \( 196 \div 24 = 8 \).<br>
+                <strong>Resultado:</strong> \( 108 \).
+            </p>
+        </div>
+    </div>
+</body>
+<body>
+    <!-- MDC -->
+    <div class="section">
+        <h2>Máximo Divisor Comum (MDC)</h2>
+        <p>O Máximo Divisor Comum (MDC) é o maior número que divide dois ou mais números sem deixar resto. Existem dois métodos principais para calcular o MDC:</p>
+        <ol>
+            <li><strong>Listagem de Divisores:</strong> Liste os divisores dos números e identifique o maior divisor comum.</li>
+            <li><strong>Fatoração:</strong> Decomponha os números em fatores primos e multiplique os fatores comuns elevados ao menor expoente.</li>
+        </ol>
+
+        <div class="dica">
+            <strong>Dica da Tia Querzia Paula:</strong> Use o método de fatoração para números maiores, pois é mais eficiente.
+        </div>
+
+        <h3>Exemplo 1: MDC(12, 18) - Listagem de Divisores</h3>
+        <p>
+            Divisores de \( 12 \): \( 1, 2, 3, 4, 6, 12 \).<br>
+            Divisores de \( 18 \): \( 1, 2, 3, 6, 9, 18 \).<br>
+            Divisores comuns: \( 1, 2, 3, 6 \).<br>
+            <strong>Resultado:</strong> \( MDC(12, 18) = 6 \).
+        </p>
+
+        <h3>Exemplo 2: MDC(48, 72) - Fatoração</h3>
+        <p>
+            Decomponha os números em fatores primos:
+        </p>
+        <div class="formula">
+            $$48 = 2^4 \times 3^1$$  
+            $$72 = 2^3 \times 3^2$$
+        </div>
+        <p>
+            Multiplique os fatores comuns com os menores expoentes:<br>
+            Fator comum: \( 2^3 \) e \( 3^1 \).<br>
+            \( MDC(48, 72) = 2^3 \times 3^1 = 24 \).
+        </p>
+    </div>
+
+    <!-- MMC -->
+    <div class="section">
+        <h2>Mínimo Múltiplo Comum (MMC)</h2>
+        <p>O Mínimo Múltiplo Comum (MMC) é o menor número múltiplo comum entre dois ou mais números. Existem dois métodos principais para calcular o MMC:</p>
+        <ol>
+            <li><strong>Listagem de Múltiplos:</strong> Liste os múltiplos dos números e identifique o menor múltiplo comum.</li>
+            <li><strong>Fatoração:</strong> Decomponha os números em fatores primos e multiplique todos os fatores, utilizando o maior expoente de cada fator.</li>
+        </ol>
+
+        <div class="dica">
+            <strong>Dica da Tia Querzia Paula:</strong> O método de fatoração evita listagens longas e é ideal para números grandes.
+        </div>
+
+        <h3>Exemplo 1: MMC(4, 6) - Listagem de Múltiplos</h3>
+        <p>
+            Múltiplos de \( 4 \): \( 4, 8, 12, 16, \dots \).<br>
+            Múltiplos de \( 6 \): \( 6, 12, 18, \dots \).<br>
+            Primeiro múltiplo comum: \( 12 \).<br>
+            <strong>Resultado:</strong> \( MMC(4, 6) = 12 \).
+        </p>
+
+        <h3>Exemplo 2: MMC(8, 12) - Fatoração</h3>
+        <p>
+            Decomponha os números em fatores primos:
+        </p>
+        <div class="formula">
+            $$8 = 2^3$$  
+            $$12 = 2^2 \times 3^1$$
+        </div>
+        <p>
+            Multiplique todos os fatores com os maiores expoentes:<br>
+            Fatores: \( 2^3 \) e \( 3^1 \).<br>
+            \( MMC(8, 12) = 2^3 \times 3^1 = 24 \).
+        </p>
+    </div>
+</body>
+<body>
+    <!-- Conclusão -->
+    <div class="section">
+        <h2>Conclusão</h2>
+        <p>Este módulo cobriu os conceitos fundamentais de números naturais, incluindo definições, propriedades, operações básicas (adição, subtração, multiplicação e divisão), além de MDC e MMC.</p>
+        <div class="dica">
+            <strong>Mensagem da Tia Querzia Paula:</strong> Lembre-se de praticar bastante! Com essas dicas, você está mais do que preparado para enfrentar problemas com confiança. Bons estudos!
+        </div>
+    </div>
+</body>

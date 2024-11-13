@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Números Decimais e Frações</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.8;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h3 {
+            color: #0056b3;
+        }
+        .exercise {
+            margin-bottom: 30px;
+        }
+        .exercise h3 {
+            margin-bottom: 10px;
+        }
+        .question {
+            background-color: #eaf3fc;
+            padding: 15px;
+            border-left: 4px solid #0056b3;
+            margin-bottom: 10px;
+        }
+        .solution {
+            background-color: #d4edda;
+            padding: 15px;
+            border-left: 4px solid #28a745;
+            display: none;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #0056b3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #004494;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercícios de Fixação</h1>
+
+    <!-- Exercício 1 -->
+    <div class="exercise">
+        <h3>Exercício 1: Adição</h3>
+        <div class="question">
+            Calcule \( 12,34 + 7,56 \) usando alinhamento de vírgulas.
+        </div>
+        <a class="btn" onclick="toggleSolution(1)">Ver Resolução</a>
+        <div id="solution-1" class="solution">
+            <strong>Resolução:</strong>
+            <pre>
+              12,34
+            +  7,56
+            --------
+              19,90
+            </pre>
+            Alinhamos as vírgulas, somamos as colunas e mantivemos a vírgula na mesma posição.
+        </div>
+    </div>
+
+    <!-- Exercício 2 -->
+    <div class="exercise">
+        <h3>Exercício 2: Subtração</h3>
+        <div class="question">
+            Resolva \( 45,678 - 12,345 \).
+        </div>
+        <a class="btn" onclick="toggleSolution(2)">Ver Resolução</a>
+        <div id="solution-2" class="solution">
+            <strong>Resolução:</strong>
+            <pre>
+              45,678
+            - 12,345
+            ---------
+              33,333
+            </pre>
+            Alinhamos as vírgulas, subtraímos coluna por coluna e mantivemos a vírgula na mesma posição.
+        </div>
+    </div>
+
+    <!-- Exercício 3 -->
+    <div class="exercise">
+        <h3>Exercício 3: Multiplicação</h3>
+        <div class="question">
+            Calcule \( 3,14 \times 1,2 \) aplicando a técnica de ignorar casas decimais.
+        </div>
+        <a class="btn" onclick="toggleSolution(3)">Ver Resolução</a>
+        <div id="solution-3" class="solution">
+            <strong>Resolução:</strong>
+            <pre>
+            Multiplicamos como inteiros:
+              314 × 12 = 3768
+            Ajustamos as casas decimais (2 no total):
+              3,768
+            </pre>
+        </div>
+    </div>
+
+    <!-- Exercício 4 -->
+    <div class="exercise">
+        <h3>Exercício 4: Divisão</h3>
+        <div class="question">
+            Resolva \( 56,25 \div 7,5 \) utilizando a técnica de mover a vírgula.
+        </div>
+        <a class="btn" onclick="toggleSolution(4)">Ver Resolução</a>
+        <div id="solution-4" class="solution">
+            <strong>Resolução:</strong>
+            <pre>
+            Movemos a vírgula para transformar o divisor em inteiro:
+              5625 ÷ 75 = 75
+            Realizamos a divisão normalmente.
+            </pre>
+        </div>
+    </div>
+
+    <!-- Exercício 5 -->
+    <div class="exercise">
+        <h3>Exercício 5: Conversão de Fração para Decimal</h3>
+        <div class="question">
+            Converta a fração \( \frac{7}{8} \) para decimal.
+        </div>
+        <a class="btn" onclick="toggleSolution(5)">Ver Resolução</a>
+        <div id="solution-5" class="solution">
+            <strong>Resolução:</strong>
+            <pre>
+            Dividimos o numerador pelo denominador:
+              7 ÷ 8 = 0,875
+            </pre>
+        </div>
+    </div>
+
+    <!-- Exercício 6 -->
+    <div class="exercise">
+        <h3>Exercício 6: Conversão de Decimal para Fração</h3>
+        <div class="question">
+            Converta \( 0,125 \) para uma fração simplificada.
+        </div>
+        <a class="btn" onclick="toggleSolution(6)">Ver Resolução</a>
+        <div id="solution-6" class="solution">
+            <strong>Resolução:</strong>
+            <pre>
+            Escrevemos como fração:
+              0,125 = 125/1000
+            Simplificamos pelo MDC (125):
+              1/8
+            </pre>
+        </div>
+    </div>
+
+    <!-- Exercício 7 -->
+    <div class="exercise">
+        <h3>Exercício 7: Problema Prático</h3>
+        <div class="question">
+            Maria comprou os seguintes itens:
+            <ul>
+                <li>R$ 12,75 em frutas</li>
+                <li>R$ 5,50 em verduras</li>
+                <li>R$ 7,25 em pães</li>
+            </ul>
+            Quanto ela gastou no total?
+        </div>
+        <a class="btn" onclick="toggleSolution(7)">Ver Resolução</a>
+        <div id="solution-7" class="solution">
+            <strong>Resolução:</strong>
+            <pre>
+              12,75
+            +  5,50
+            +  7,25
+            --------
+              25,50
+            </pre>
+        </div>
+    </div>
+
+<div class="exercise">
+    <h3>Exercício 1: Operações com Decimais</h3>
+    <div class="question">
+        <strong>1. Uma loja vende um produto por R$ 49,99. Durante uma promoção, oferece um desconto de R$ 15,50. Qual é o preço do produto com o desconto?</strong>
+        <ul>
+            <li><input type="radio" name="q1" id="q1a" value="a"> a) R$ 34,49</li>
+            <li><input type="radio" name="q1" id="q1b" value="b"> b) R$ 35,49</li>
+            <li><input type="radio" name="q1" id="q1c" value="c"> c) R$ 36,50</li>
+            <li><input type="radio" name="q1" id="q1d" value="d"> d) R$ 35,50</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(8)">Ver Resolução</a>
+    <div id="solution-8" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Preço inicial: \( 49,99 \) <br>
+            Desconto: \( 15,50 \) <br>
+            Cálculo: \( 49,99 - 15,50 = 34,49 \) <br>
+            Resposta correta: \( \textbf{a) 34,49} \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 2: Multiplicação</h3>
+    <div class="question">
+        <strong>2. Um litro de gasolina custa R$ 6,79. Qual é o custo de 15,5 litros?</strong>
+        <ul>
+            <li><input type="radio" name="q2" id="q2a" value="a"> a) R$ 104,54</li>
+            <li><input type="radio" name="q2" id="q2b" value="b"> b) R$ 105,24</li>
+            <li><input type="radio" name="q2" id="q2c" value="c"> c) R$ 105,14</li>
+            <li><input type="radio" name="q2" id="q2d" value="d"> d) R$ 104,94</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(9)">Ver Resolução</a>
+    <div id="solution-9" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Preço por litro: \( 6,79 \) <br>
+            Quantidade: \( 15,5 \) <br>
+            Multiplicando: \( 6,79 \times 15,5 = 105,245 \). <br>
+            Ajustando para duas casas decimais: \( 105,25 \). <br>
+            Resposta correta: \( \textbf{b) 105,24} \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 3: Divisão</h3>
+    <div class="question">
+        <strong>3. Uma fábrica produz 375,75 kg de um produto em 15 dias. Qual é a média de produção diária?</strong>
+        <ul>
+            <li><input type="radio" name="q3" id="q3a" value="a"> a) 25,05 kg</li>
+            <li><input type="radio" name="q3" id="q3b" value="b"> b) 24,95 kg</li>
+            <li><input type="radio" name="q3" id="q3c" value="c"> c) 25,00 kg</li>
+            <li><input type="radio" name="q3" id="q3d" value="d"> d) 25,15 kg</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(10)">Ver Resolução</a>
+    <div id="solution-10" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Produção total: \( 375,75 \) kg <br>
+            Dias: \( 15 \) <br>
+            Dividindo: \( 375,75 \div 15 = 25,05 \). <br>
+            Resposta correta: \( \textbf{a) 25,05} \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 4: Comparação</h3>
+    <div class="question">
+        <strong>4. Qual é maior: 3,14 ou 22/7?</strong>
+        <ul>
+            <li><input type="radio" name="q4" id="q4a" value="a"> a) 3,14</li>
+            <li><input type="radio" name="q4" id="q4b" value="b"> b) 22/7</li>
+            <li><input type="radio" name="q4" id="q4c" value="c"> c) São iguais</li>
+            <li><input type="radio" name="q4" id="q4d" value="d"> d) Não é possível determinar</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(11)">Ver Resolução</a>
+    <div id="solution-11" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Transformando \( 22/7 \) em decimal: \( 22 \div 7 \approx 3,142857 \). <br>
+            Comparando: \( 3,142857 > 3,14 \). <br>
+            Resposta correta: \( \textbf{b) 22/7} \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 5: Problema Contextualizado</h3>
+    <div class="question">
+        <strong>5. Uma empresa paga R$ 0,75 por quilômetro rodado a seus motoristas. Quantos quilômetros um motorista rodou se recebeu R$ 337,50?</strong>
+        <ul>
+            <li><input type="radio" name="q5" id="q5a" value="a"> a) 450 km</li>
+            <li><input type="radio" name="q5" id="q5b" value="b"> b) 500 km</li>
+            <li><input type="radio" name="q5" id="q5c" value="c"> c) 525 km</li>
+            <li><input type="radio" name="q5" id="q5d" value="d"> d) 475 km</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(12)">Ver Resolução</a>
+    <div id="solution-12" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Valor recebido: \( 337,50 \) <br>
+            Custo por quilômetro: \( 0,75 \) <br>
+            Dividindo: \( 337,50 \div 0,75 = 450 \). <br>
+            Resposta correta: \( 450 km \).
+        </p>
+    </div>
+</div>
+
+
+<div class="exercise">
+    <h3>Exercício 1: Soma de Valores</h3>
+    <div class="question">
+        <strong>1. Luzia foi ao mercado fazer compras. Ela decidiu conferir o extrato emitido pelo caixa para conferir os itens e preços, que marcavam os seguintes valores:</strong>
+        <ul>
+            <li>R$ 16,50</li>
+            <li>R$ 48,75</li>
+            <li>R$ 27,80</li>
+            <li>R$ 9,35</li>
+        </ul>
+        <p>Determine o valor total pago por Luzia.</p>
+    </div>
+    <a class="btn" onclick="toggleSolution(13)">Ver Resolução</a>
+    <div id="solution-13" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Soma dos valores:<br>
+            \( 16,50 + 48,75 + 27,80 + 9,35 \)<br>
+            Alinhando as casas decimais:<br>
+            <pre>
+              16,50
+            + 48,75
+            + 27,80
+            +  9,35
+            --------
+             102,40
+            </pre>
+            Resposta: \( R$ 102,40 \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 2: Preço por Unidade e Total</h3>
+    <div class="question">
+        <strong>2. Uma estamparia está com uma encomenda de camisas para um evento. O cliente fez um pedido de 60 camisas brancas com uma estampa da marca do evento. O gerente da estamparia disse que o custo da unidade da camisa é de R$ 23,50 e o serviço de estamparia custa um preço fixo de R$ 120,00, até 100 camisas.</strong>
+        <p>Determine o preço por unidade de camisa estampada pago pelo cliente e o preço final da encomenda.</p>
+    </div>
+    <a class="btn" onclick="toggleSolution(14)">Ver Resolução</a>
+    <div id="solution-14" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Custo total das camisas sem estampa: \( 60 \times 23,50 = 1410,00 \)<br>
+            Custo da estampa: \( 120,00 \)<br>
+            Total: \( 1410,00 + 120,00 = 1530,00 \)<br>
+            Preço por unidade: \( 1530,00 \div 60 = 25,50 \)<br>
+            Resposta: Preço final \( \  R$ 1530,00 \), Preço por unidade   R$ 25,50  .
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 3: Média de Gols</h3>
+    <div class="question">
+        <strong>3. Bruno, Cláudio, Daniel, Emerson e Fabrício formam o time de futsal do ensino médio da escola. No último campeonato, cada um marcou o seguinte número de gols:</strong>
+        <ul>
+            <li>Bruno: 2</li>
+            <li>Cláudio: 3</li>
+            <li>Daniel: 2</li>
+            <li>Emerson: 5</li>
+            <li>Fabrício: 4</li>
+        </ul>
+        <p>Determine a média de gols por jogador do time no último campeonato.</p>
+    </div>
+    <a class="btn" onclick="toggleSolution(15)">Ver Resolução</a>
+    <div id="solution-15" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Soma dos gols: \( 2 + 3 + 2 + 5 + 4 = 16 \)<br>
+            Número de jogadores: \( 5 \)<br>
+            Média: \( 16 \div 5 = 3,2 \)<br>
+            Resposta: \( 3,2 gols por jogador \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 4: Desconto</h3>
+    <div class="question">
+        <strong>4. Uma loja de roupas está fazendo uma promoção de 20% de desconto em todas as peças. Joana quer comprar uma blusa que custa R$ 49,90 e uma calça que custa R$ 79,90. Quanto ela vai pagar pelas duas peças com o desconto?</strong>
+    </div>
+    <a class="btn" onclick="toggleSolution(16)">Ver Resolução</a>
+    <div id="solution-16" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Total sem desconto: \( 49,90 + 79,90 = 129,80 \)<br>
+            Desconto total: \( 129,80 \times 0,2 = 25,96 \)<br>
+            Total com desconto: \( 129,80 - 25,96 = 103,84 \)<br>
+            Resposta: \( R$ 103,84 \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 5: Troco</h3>
+    <div class="question">
+        <strong>5. Suponha uma situação em que um pagante entrega uma nota de R$ 50,00 para o recebedor, por um produto de R$ 23,20. Calcule o troco necessário.</strong>
+    </div>
+    <a class="btn" onclick="toggleSolution(17)">Ver Resolução</a>
+    <div id="solution-17" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Troco: \( 50,00 - 23,20 = 26,80 \)<br>
+            Resposta: \( R$ 26,80 \).
+        </p>
+    </div>
+</div>
+
+
+
+
+
+<div style="text-align: center; margin: 20px 0;">
+    <button class="btn" onclick="revealAllSolutions()">Mostrar Todas as Resoluções</button>
+</div>
+
+
+
+
+
+
+    <script>
+		function revealAllSolutions() {
+    for (let i = 1; i <= 47; i++) {
+        const solution = document.getElementById(`solution-${i}`);
+        if (solution) {
+            solution.style.display = "block";
+        }
+    }
+}
+	
+        function toggleSolution(id) {
+            const solution = document.getElementById(`solution-${id}`);
+            solution.style.display = solution.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>

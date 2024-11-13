@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 5: Unidades de Medida</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        p, li {
+            margin-bottom: 15px;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        strong {
+            color: #333;
+        }
+
+        .formula {
+            background-color: #fff;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .dica {
+            background-color: #e7f5ff;
+            border-left: 6px solid #0056b3;
+            padding: 10px 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .dica strong {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Módulo 5: Unidades de Medida</h1>
+
+    <!-- Introdução -->
+    <div class="section">
+        <h2>Introdução às Unidades de Medida na Navegação</h2>
+        <p>As unidades de medida desempenham um papel crucial no cotidiano da Marinha Mercante. Desde a medição de pressão e temperatura até o cálculo de carga e distribuição de peso no navio, as medidas são essenciais para garantir segurança e eficiência.</p>
+        <p><strong>Aplicações no universo marítimo:</strong></p>
+        <ul>
+            <li>Pressão de óleo e extintores: medidos em \( \text{psi} \) ou \( \text{bar} \).</li>
+            <li>Temperatura de máquinas: monitorada em graus Celsius (\( \text{°C} \)) ou Kelvin (\( \text{K} \)).</li>
+            <li>Medição de carga: peso total em toneladas (\( \text{t} \)), volume em metros cúbicos (\( \text{m}^3 \)).</li>
+            <li>Velocidade do navio: expressa em nós (milhas náuticas por hora).</li>
+            <li>Consumo de combustível: em litros (\( \text{L} \)) ou toneladas por dia.</li>
+        </ul>
+    </div>
+
+    <div>
+
+<div>
+
+<div>
+    <h2>Unidades de Comprimento</h2>
+    <p>
+        A unidade principal de comprimento é o metro (m). Em situações que exigem a medição de grandes extensões ou de dimensões muito pequenas, utilizamos os múltiplos e submúltiplos do metro. A tabela abaixo apresenta as relações entre essas unidades:
+    </p>
+
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <!-- Setas à esquerda -->
+        <div style="text-align: center; margin-right: 20px;">
+            <span style="font-weight: bold; color: #007bff;">Multiplicar por 10</span>
+            <br>
+            <span style="font-size: 24px;">&#8592;</span>
+        </div>
+
+        <!-- Tabela horizontal -->
+        <table style="border-collapse: collapse; text-align: center; border: 1px solid #ccc;">
+            <tr>
+                <th style="border: 1px solid #ccc; padding: 10px;">Milímetro<br>(mm)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Centímetro<br>(cm)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Decímetro<br>(dm)</th>
+                <th style="border: 1px solid #ccc; padding: 10px; color: red;">Metro<br>(m)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Decâmetro<br>(dam)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Hectômetro<br>(hm)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Quilômetro<br>(km)</th>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ccc; padding: 10px;">1000</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">100</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">10</td>
+                <td style="border: 1px solid #ccc; padding: 10px; color: red;">1</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">0,1</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">0,01</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">0,001</td>
+            </tr>
+        </table>
+
+        <!-- Setas à direita -->
+        <div style="text-align: center; margin-left: 20px;">
+            <span style="font-weight: bold; color: #007bff;">Dividir por 10</span>
+            <br>
+            <span style="font-size: 24px;">&#8594;</span>
+        </div>
+    </div>
+
+    <p style="text-align: center; margin-top: 20px;">
+        Para converter entre as unidades, siga estas regras:<br>
+        <strong>Para a direita:</strong> Divida por 10.<br>
+        <strong>Para a esquerda:</strong> Multiplique por 10.
+    </p>
+</div>
+
+    
+<div>
+    <h2>Unidades de Volume</h2>
+    <p>
+        A unidade principal de volume é o metro cúbico (m³). Para medir volumes muito pequenos ou muito grandes, utilizamos múltiplos e submúltiplos do metro cúbico. Veja a tabela abaixo:
+    </p>
+
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <!-- Setas à esquerda -->
+        <div style="text-align: center; margin-right: 20px;">
+            <span style="font-weight: bold; color: #007bff;">Multiplicar por 10</span>
+            <br>
+            <span style="font-size: 24px;">&#8592;</span>
+        </div>
+
+        <!-- Tabela horizontal -->
+        <table style="border-collapse: collapse; text-align: center; border: 1px solid #ccc;">
+            <tr>
+                <th style="border: 1px solid #ccc; padding: 10px;">Milímetro cúbico<br>(mm³)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Centímetro cúbico<br>(cm³)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Decímetro cúbico<br>(dm³)</th>
+                <th style="border: 1px solid #ccc; padding: 10px; color: red;">Metro cúbico<br>(m³)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Decâmetro cúbico<br>(dam³)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Hectômetro cúbico<br>(hm³)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Quilômetro cúbico<br>(km³)</th>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ccc; padding: 10px;">1000</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">100</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">10</td>
+                <td style="border: 1px solid #ccc; padding: 10px; color: red;">1</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">0,1</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">0,01</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">0,001</td>
+            </tr>
+        </table>
+
+        <!-- Setas à direita -->
+        <div style="text-align: center; margin-left: 20px;">
+            <span style="font-weight: bold; color: #007bff;">Dividir por 10</span>
+            <br>
+            <span style="font-size: 24px;">&#8594;</span>
+        </div>
+    </div>
+
+    <p style="text-align: center; margin-top: 20px;">
+        Para converter entre as unidades, siga estas regras:<br>
+        <strong>Para a direita:</strong> Divida por 10.<br>
+        <strong>Para a esquerda:</strong> Multiplique por 10.
+    </p>
+</div>
+
+
+    <div>
+    <h2>Unidades de Massa</h2>
+    <p>A unidade padrão de massa no Sistema Internacional (SI) é o quilograma (\(kg\)). Outros múltiplos e submúltiplos são usados em diversas aplicações práticas:</p>
+
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <!-- Setas à esquerda -->
+        <div style="text-align: center; margin-right: 20px;">
+            <span style="font-weight: bold; color: #007bff;">Multiplicar por 10</span>
+            <br>
+            <span style="font-size: 24px;">&#8592;</span>
+        </div>
+
+        <!-- Tabela horizontal -->
+        <table style="border-collapse: collapse; text-align: center; border: 1px solid #ccc;">
+            <tr>
+                <th style="border: 1px solid #ccc; padding: 10px;">Miligrama<br>(mg)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Centigrama<br>(cg)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Decigrama<br>(dg)</th>
+                <th style="border: 1px solid #ccc; padding: 10px; color: red;">Grama<br>(g)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Decagrama<br>(dag)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Hectograma<br>(hg)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Quilograma<br>(kg)</th>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ccc; padding: 10px;">1000</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">100</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">10</td>
+                <td style="border: 1px solid #ccc; padding: 10px; color: red;">1</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">0,1</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">0,01</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">0,001</td>
+            </tr>
+        </table>
+
+        <!-- Setas à direita -->
+        <div style="text-align: center; margin-left: 20px;">
+            <span style="font-weight: bold; color: #007bff;">Dividir por 10</span>
+            <br>
+            <span style="font-size: 24px;">&#8594;</span>
+        </div>
+    </div>
+
+    <p style="text-align: center; margin-top: 20px;">
+        Para converter entre as unidades, siga estas regras:<br>
+        <strong>Para a direita:</strong> Divida por 10.<br>
+        <strong>Para a esquerda:</strong> Multiplique por 10.
+    </p>
+</div>
+
+	
+	
+    <div class="dica">
+        <h3>Dica da Tia Querzia:</h3>
+        <p>
+            Na navegação mercante, as medidas de peso da carga são fundamentais para calcular a estabilidade do navio. Sempre converta as massas para toneladas (\(t\)) ao preencher relatórios de carga!
+        </p>
+    </div>
+</div>
+
+<div>
+ 
+ <div>
+    <h2>Unidades de Tempo</h2>
+    <p>
+        O tempo não segue uma lógica decimal como as outras unidades, mas ainda assim é possível realizar conversões com base em regras específicas. Veja a tabela abaixo:
+    </p>
+
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <!-- Setas à esquerda -->
+        <div style="text-align: center; margin-right: 20px;">
+            <span style="font-weight: bold; color: #007bff;">Multiplicar conforme a relação</span>
+            <br>
+            <span style="font-size: 24px;">&#8592;</span>
+        </div>
+
+        <!-- Tabela horizontal -->
+        <table style="border-collapse: collapse; text-align: center; border: 1px solid #ccc;">
+            <tr>
+                <th style="border: 1px solid #ccc; padding: 10px;">Milissegundo<br>(ms)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Segundo<br>(s)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Minuto<br>(min)</th>
+                <th style="border: 1px solid #ccc; padding: 10px; color: red;">Hora<br>(h)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Dia<br>(d)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Semana<br>(sem)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Mês<br>(mês)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Ano<br>(a)</th>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ccc; padding: 10px;">1/1000</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">1</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">60</td>
+                <td style="border: 1px solid #ccc; padding: 10px; color: red;">3600</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">86400</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">604800</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">~2,6 milhões</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">31,5 milhões</td>
+            </tr>
+        </table>
+
+        <!-- Setas à direita -->
+        <div style="text-align: center; margin-left: 20px;">
+            <span style="font-weight: bold; color: #007bff;">Dividir conforme a relação</span>
+            <br>
+            <span style="font-size: 24px;">&#8594;</span>
+        </div>
+    </div>
+
+    <p style="text-align: center; margin-top: 20px;">
+        Para converter entre as unidades, use as seguintes relações:<br>
+        <strong>1 minuto (min) = 60 segundos (s)</strong><br>
+        <strong>1 hora (h) = 60 minutos (min)</strong><br>
+        <strong>1 dia (d) = 24 horas (h)</strong><br>
+        <strong>1 ano = 365 dias ou 12 meses</strong>
+    </p>
+</div>
+
+ 
+
+    <div class="dica">
+        <h3>Dica da Tia Querzia:</h3>
+        <p>
+            Durante uma jornada marítima, o cálculo do tempo é essencial para estimar o consumo de combustível e o tempo de chegada (ETA). Sempre trabalhe com horas e converta para minutos ou segundos, quando necessário, para maior precisão!
+        </p>
+    </div>
+</div>
+
+<div>
+    <h2>Exemplo Aplicado: Navegação e Tempo</h2>
+    <p>
+        Um navio percorre 300 milhas náuticas em 24 horas. Calcule a velocidade média em nós (milhas náuticas por hora).
+    </p>
+    <p>
+        <strong>Resolução:</strong> Velocidade média é calculada dividindo-se a distância pelo tempo:
+        \[
+        v = \frac{\text{distância}}{\text{tempo}} = \frac{300}{24} \approx 12,5 \, \text{nós}.
+        \]
+    </p>
+    <p>O navio percorreu, em média, 12,5 milhas náuticas por hora.</p>
+</div>
+<div>
+<div>
+    <h2>Unidades de Superfície</h2>
+    <p>
+        As unidades de medida de superfície são utilizadas para calcular áreas, como a de uma embarcação ou a de uma área portuária. A unidade base no Sistema Internacional (SI) é o metro quadrado (\( m^2 \)), e seus múltiplos e submúltiplos são baseados em potências de 10. Veja a tabela abaixo:
+    </p>
+
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <!-- Setas à esquerda -->
+        <div style="text-align: center; margin-right: 20px;">
+            <span style="font-weight: bold; color: #007bff;">Multiplicar por 100</span>
+            <br>
+            <span style="font-size: 24px;">&#8592;</span>
+        </div>
+
+        <!-- Tabela horizontal -->
+        <table style="border-collapse: collapse; text-align: center; border: 1px solid #ccc;">
+            <tr>
+                <th style="border: 1px solid #ccc; padding: 10px;">Milímetro Quadrado<br>(\( mm^2 \))</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Centímetro Quadrado<br>(\( cm^2 \))</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Decímetro Quadrado<br>(\( dm^2 \))</th>
+                <th style="border: 1px solid #ccc; padding: 10px; color: red;">Metro Quadrado<br>(\( m^2 \))</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Decâmetro Quadrado<br>(\( dam^2 \))</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Hectômetro Quadrado<br>(\( hm^2 \))</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Quilômetro Quadrado<br>(\( km^2 \))</th>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ccc; padding: 10px;">\( 1/1000000 \)</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">\( 1/10000 \)</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">\( 1/100 \)</td>
+                <td style="border: 1px solid #ccc; padding: 10px; color: red;">1</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">100</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">10000</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">1000000</td>
+            </tr>
+        </table>
+
+        <!-- Setas à direita -->
+        <div style="text-align: center; margin-left: 20px;">
+            <span style="font-weight: bold; color: #007bff;">Dividir por 100</span>
+            <br>
+            <span style="font-size: 24px;">&#8594;</span>
+        </div>
+    </div>
+
+    <p style="text-align: center; margin-top: 20px;">
+        Para converter entre as unidades, use as seguintes regras:<br>
+        <strong>1 \( m^2 = 100 \, dm^2 \)</strong><br>
+        <strong>1 \( dm^2 = 100 \, cm^2 \)</strong><br>
+        <strong>1 \( km^2 = 100 \, hm^2 \)</strong>
+    </p>
+	
+	
+	
+	
+</div>
+
+
+    <div class="dica">
+        <h3>Dica da Tia Querzia:</h3>
+        <p>
+            Na navegação, as áreas de carga são medidas em metros quadrados (\(m^2\)). Use múltiplos maiores, como hectares (\(hm^2\)), para áreas de portos ou estaleiros!
+        </p>
+    </div>
+</div>
+
+<div>
+ 
+ 
+ <div>
+    <h2>Unidades de Capacidade</h2>
+    <p>
+        A unidade principal de capacidade é o litro (L). Para medir capacidades maiores ou menores, utilizamos múltiplos e submúltiplos do litro, conforme mostra a tabela abaixo:
+    </p>
+
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <!-- Setas à esquerda -->
+        <div style="text-align: center; margin-right: 20px;">
+            <span style="font-weight: bold; color: #007bff;">Multiplicar por 10</span>
+            <br>
+            <span style="font-size: 24px;">&#8592;</span>
+        </div>
+
+        <!-- Tabela horizontal -->
+        <table style="border-collapse: collapse; text-align: center; border: 1px solid #ccc;">
+            <tr>
+                <th style="border: 1px solid #ccc; padding: 10px;">Mililitro<br>(mL)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Centilitro<br>(cL)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Decilitro<br>(dL)</th>
+                <th style="border: 1px solid #ccc; padding: 10px; color: red;">Litro<br>(L)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Decalitro<br>(daL)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Hectolitro<br>(hL)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Quilolitro<br>(kL)</th>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ccc; padding: 10px;">1000</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">100</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">10</td>
+                <td style="border: 1px solid #ccc; padding: 10px; color: red;">1</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">0,1</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">0,01</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">0,001</td>
+            </tr>
+        </table>
+
+        <!-- Setas à direita -->
+        <div style="text-align: center; margin-left: 20px;">
+            <span style="font-weight: bold; color: #007bff;">Dividir por 10</span>
+            <br>
+            <span style="font-size: 24px;">&#8594;</span>
+        </div>
+    </div>
+
+    <p style="text-align: center; margin-top: 20px;">
+        Para converter entre as unidades, siga estas regras:<br>
+        <strong>Para a direita:</strong> Divida por 10.<br>
+        <strong>Para a esquerda:</strong> Multiplique por 10.
+    </p>
+</div>
+
+
+    <div class="dica">
+        <h3>Dica da Tia Querzia:</h3>
+        <p>
+            Durante a medição de combustível em tanques, é comum usar hectolitros (\(hl\)) para valores maiores. Lembre-se de verificar o volume disponível para evitar sobrecarga!
+        </p>
+    </div>
+</div>
+
+<div>
+    <h2>Exemplo Aplicado: Armazenamento de Água</h2>
+    <p>
+        Um tanque de água a bordo de um navio tem capacidade para 3.000 litros. Durante uma operação, 2.150 litros foram consumidos. Quantos litros restam no tanque?
+    </p>
+    <p>
+        <strong>Resolução:</strong> 
+        \[
+        \text{Capacidade restante} = \text{Capacidade total} - \text{Consumo} = 3.000 - 2.150 = 850 \, l.
+        \]
+    </p>
+    <p>Restam 850 litros no tanque.</p>
+</div>
+
+
+<div>
+    <h2>Outras Unidades de Medida </h2>
+    <h2>Unidades de Pressão</h2>
+    <p>
+        A unidade principal de pressão no SI é o Pascal (Pa), definido como a força de 1 Newton (N) aplicada sobre uma área de 1 metro quadrado (m²). No entanto, na Marinha Mercante e na navegação, é comum encontrarmos outras unidades de pressão como bar, atm (atmosfera) e PSI (libras por polegada quadrada).
+    </p>
+
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <!-- Setas à esquerda -->
+        <div style="text-align: center; margin-right: 20px;">
+            <span style="font-weight: bold; color: #007bff;">Multiplicar conforme a relação</span>
+            <br>
+            <span style="font-size: 24px;">&#8592;</span>
+        </div>
+
+        <!-- Tabela horizontal -->
+        <table style="border-collapse: collapse; text-align: center; border: 1px solid #ccc;">
+            <tr>
+                <th style="border: 1px solid #ccc; padding: 10px;">Pascal<br>(Pa)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">HectoPascal<br>(hPa)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">Bar<br>(bar)</th>
+                <th style="border: 1px solid #ccc; padding: 10px; color: red;">Atmosfera<br>(atm)</th>
+                <th style="border: 1px solid #ccc; padding: 10px;">PSI<br>(psi)</th>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ccc; padding: 10px;">1</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">100</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">0,00001</td>
+                <td style="border: 1px solid #ccc; padding: 10px; color: red;">0,00000987</td>
+                <td style="border: 1px solid #ccc; padding: 10px;">0,000145</td>
+            </tr>
+        </table>
+
+        <!-- Setas à direita -->
+        <div style="text-align: center; margin-left: 20px;">
+            <span style="font-weight: bold; color: #007bff;">Dividir conforme a relação</span>
+            <br>
+            <span style="font-size: 24px;">&#8594;</span>
+        </div>
+    </div>
+
+    <p style="text-align: center; margin-top: 20px;">
+        Algumas conversões úteis para navegação:<br>
+        <strong>1 bar = 100.000 Pascal (Pa)</strong><br>
+        <strong>1 atm = 101.325 Pascal (Pa)</strong><br>
+        <strong>1 PSI = 6.894 Pascal (Pa)</strong>
+    </p>
+</div>
+
+
+<div class="section">
+    <h2>Relação entre Litros e Decímetros Cúbicos</h2>
+    <p>
+        Existe uma relação direta entre <strong>litros (L)</strong> e <strong>decímetros cúbicos (\(dm^3\))</strong>, que é muito importante no cálculo de volumes, especialmente em aplicações práticas, como o transporte de líquidos em embarcações ou o cálculo de capacidade de tanques e recipientes.
+    </p>
+    <p>No Sistema Internacional de Unidades (SI):</p>
+    <div class="formula">
+        \[
+        1 \, \text{litro} = 1 \, dm^3
+        \]
+    </div>
+    <p>
+        Essa equivalência ocorre porque um litro é definido como o volume ocupado por um cubo com 10 cm de aresta. Em unidades do SI, \(10 \, \text{cm} = 1 \, \text{dm}\), e o volume do cubo será:
+    </p>
+    <div class="formula">
+        \[
+        V = \text{aresta}^3 = (1 \, \text{dm})^3 = 1 \, dm^3
+        \]
+    </div>
+    <p>Portanto, \(1 \, \text{litro}\) é equivalente a \(1 \, dm^3\), e os múltiplos e submúltiplos de litros seguem a mesma lógica.</p>
+
+    <h3>Conversões Comuns entre Litros e Decímetros Cúbicos</h3>
+    <ul>
+        <li>\(1 \, \text{litro} = 1 \, dm^3\)</li>
+        <li>\(1 \, \text{mililitro} = 0,001 \, \text{litro} = 0,001 \, dm^3 = 1 \, cm^3\)</li>
+        <li>\(1 \, \text{quilolitro} = 1000 \, \text{litros} = 1000 \, dm^3 = 1 \, m^3\)</li>
+        <li>\(1 \, \text{m}^3 = 1000 \, \text{litros}\)</li>
+        <li>\(1 \, \text{cm}^3 = 1 \, \text{mililitro}\)</li>
+    </ul>
+
+    <h3>Exemplos de Aplicações Práticas</h3>
+
+    <h4>Exemplo 1: Cálculo da Capacidade de um Tanque</h4>
+    <p>
+        Um tanque cilíndrico de combustível em uma embarcação tem raio de base de \(0,5 \, \text{m}\) e altura de \(1,5 \, \text{m}\). Qual é a capacidade total do tanque em litros?
+    </p>
+    <div class="solution">
+        <strong>Solução:</strong>
+        <p>
+            Calcule o volume do cilindro: <br>
+            \[
+            V = \pi r^2 h = \pi (0,5)^2 (1,5) = 1,178 \, \text{m}^3
+            \]
+            Converta de metros cúbicos para litros: <br>
+            \[
+            1,178 \, \text{m}^3 \times 1000 = 1178 \, \text{litros}
+            \]
+        </p>
+        <strong>Resposta:</strong> O tanque tem capacidade de <strong>1178 litros</strong>.
+    </div>
+
+    <h4>Exemplo 2: Volume de Líquido em um Recipiente</h4>
+    <p>
+        Um recipiente de formato cúbico tem 30 cm de aresta. Qual é a quantidade de líquido que ele pode conter em litros?
+    </p>
+    <div class="solution">
+        <strong>Solução:</strong>
+        <p>
+            Calcule o volume do cubo: <br>
+            \[
+            V = \text{aresta}^3 = (30 \, \text{cm})^3 = 27.000 \, \text{cm}^3
+            \]
+            Converta de centímetros cúbicos para litros (\(1 \, \text{cm}^3 = 0,001 \, \text{litro}\)): <br>
+            \[
+            27.000 \, \text{cm}^3 \times 0,001 = 27 \, \text{litros}
+            \]
+        </p>
+        <strong>Resposta:</strong> O recipiente pode conter <strong>27 litros</strong>.
+    </div>
+
+    <h4>Exemplo 3: Verificação de Volume de Água no Tanque</h4>
+    <p>
+        Um tanque de água tem capacidade de \(500 \, \text{litros}\). Sabendo que o tanque está preenchido com \(350 \, \text{litros}\), quanto falta para preenchê-lo completamente?
+    </p>
+    <div class="solution">
+        <strong>Solução:</strong>
+        <p>
+            Calcule o volume restante: <br>
+            \[
+            V_{\text{restante}} = 500 \, \text{litros} - 350 \, \text{litros} = 150 \, \text{litros}
+            \]
+            Converta o volume para decímetros cúbicos (\(1 \, \text{litro} = 1 \, dm^3\)): <br>
+            \[
+            150 \, \text{litros} = 150 \, dm^3
+            \]
+        </p>
+        <strong>Resposta:</strong> Faltam <strong>150 litros ou 150 \(dm^3\)</strong> para completar o tanque.
+    </div>
+
+
+</div>
+
+
+
+</body>
+</html>

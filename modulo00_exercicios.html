@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Números Decimais e Frações</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.8;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h3 {
+            color: #0056b3;
+        }
+        .exercise {
+            margin-bottom: 30px;
+        }
+        .exercise h3 {
+            margin-bottom: 10px;
+        }
+        .question {
+            background-color: #eaf3fc;
+            padding: 15px;
+            border-left: 4px solid #0056b3;
+            margin-bottom: 10px;
+        }
+        .solution {
+            background-color: #d4edda;
+            padding: 15px;
+            border-left: 4px solid #28a745;
+            display: none;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #0056b3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #004494;
+        }
+    </style>
+</head>
+<body>
+    
+	
+
+
+<div style="text-align: center; margin: 20px 0;">
+    <button class="btn" onclick="revealAllSolutions()">Mostrar Todas as Resoluções</button>
+</div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios - Transformações de Unidades</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .exercise {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+        .exercise h3 {
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+        .btn {
+            color: white;
+            background-color: #007bff;
+            border: none;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .solution {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+            background-color: #f1f1f1;
+        }
+    </style>
+    <script>
+        function toggleSolution(id) {
+            const solution = document.getElementById(`solution-${id}`);
+            solution.style.display = solution.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</head>
+<body>
+   <div class="exercise">
+    <h3>Exercício 1: Classificação dos Números</h3>
+    <div class="question">
+        <strong>1. Assinale Verdadeiro (V) ou Falso (F):</strong>
+        <ul>
+            <li>a) \( \frac{2}{5} \) é um número racional.</li>
+            <li>b) \( \sqrt{2} \) é um número racional.</li>
+            <li>c) \( 3 \) é um número natural.</li>
+            <li>d) O oposto de \( -5 \) é \( 5 \).</li>
+            <li>e) \( \pi \) é um número irracional.</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(1)">Ver Resolução</a>
+    <div id="solution-1" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            a) Verdadeiro, pois \( \frac{2}{5} \) pode ser representado como uma fração. <br>
+            b) Falso, pois \( \sqrt{2} \) é um número irracional. <br>
+            c) Verdadeiro, pois \( 3 \in \mathbb{N} \). <br>
+            d) Verdadeiro, \( -(-5) = 5 \). <br>
+            e) Verdadeiro, \( \pi \) não pode ser representado como uma fração exata. <br>
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 2: Conjuntos Numéricos</h3>
+    <div class="question">
+        <strong>
+            2. Qual dos números abaixo pertence ao conjunto dos números irracionais?
+        </strong>
+        <ul>
+            <li><input type="radio" name="q2" id="q2a" value="a"> a) \( \frac{3}{4} \)</li>
+            <li><input type="radio" name="q2" id="q2b" value="b"> b) \( \sqrt{7} \)</li>
+            <li><input type="radio" name="q2" id="q2c" value="c"> c) \( -5 \)</li>
+            <li><input type="radio" name="q2" id="q2d" value="d"> d) \( 0 \)</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(2)">Ver Resolução</a>
+    <div id="solution-2" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Resposta correta: \( \textbf{b) \sqrt{7}} \), pois não pode ser representado como uma fração exata.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 3: Relações entre Conjuntos</h3>
+    <div class="question">
+        <strong>3. Analise as afirmações abaixo e marque a alternativa correta:</strong>
+        <ul>
+            <li><input type="radio" name="q3" id="q3a" value="a"> a) Todo número natural é também inteiro.</li>
+            <li><input type="radio" name="q3" id="q3b" value="b"> b) Todo número racional é também inteiro.</li>
+            <li><input type="radio" name="q3" id="q3c" value="c"> c) Todo número irracional é também racional.</li>
+            <li><input type="radio" name="q3" id="q3d" value="d"> d) Nenhum número racional é natural.</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(3)">Ver Resolução</a>
+    <div id="solution-3" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Resposta correta: \( \textbf{a) Todo número natural é também inteiro.} \)
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 4: Conjuntos de Números</h3>
+    <div class="question">
+        <strong>
+            4. Classifique os números abaixo como naturais, inteiros, racionais ou irracionais:
+        </strong>
+        <ul>
+            <li>a) \( 0 \)</li>
+            <li>b) \( \sqrt{16} \)</li>
+            <li>c) \( -7 \)</li>
+            <li>d) \( \frac{1}{3} \)</li>
+            <li>e) \( \sqrt{5} \)</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(4)">Ver Resolução</a>
+    <div id="solution-4" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            a) Natural e inteiro. <br>
+            b) Natural e inteiro (raiz exata). <br>
+            c) Inteiro. <br>
+            d) Racional. <br>
+            e) Irracional. <br>
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 5: Análise de Conjuntos</h3>
+    <div class="question">
+        <strong>
+            5. Qual dos números abaixo não pertence ao conjunto dos números racionais?
+        </strong>
+        <ul>
+            <li><input type="radio" name="q5" id="q5a" value="a"> a) \( \frac{22}{7} \)</li>
+            <li><input type="radio" name="q5" id="q5b" value="b"> b) \( \sqrt{9} \)</li>
+            <li><input type="radio" name="q5" id="q5c" value="c"> c) \( \pi \)</li>
+            <li><input type="radio" name="q5" id="q5d" value="d"> d) \( -1 \)</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(5)">Ver Resolução</a>
+    <div id="solution-5" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Resposta correta: \( \textbf{c) \pi} \), pois \( \pi \) é irracional.
+        </p>
+    </div>
+</div>
+<div class="exercise">
+    <h3>Exercício 6: Características dos Conjuntos</h3>
+    <div class="question">
+        <strong>6. Qual alternativa contém apenas números que pertencem ao conjunto dos números inteiros?</strong>
+        <ul>
+            <li><input type="radio" name="q6" id="q6a" value="a"> a) \( -3, \, 0, \, 5 \)</li>
+            <li><input type="radio" name="q6" id="q6b" value="b"> b) \( 2, \, 0, \, \frac{3}{2} \)</li>
+            <li><input type="radio" name="q6" id="q6c" value="c"> c) \( -1, \, \pi, \, \sqrt{4} \)</li>
+            <li><input type="radio" name="q6" id="q6d" value="d"> d) \( \frac{5}{6}, \, -2, \, 1 \)</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(6)">Ver Resolução</a>
+    <div id="solution-6" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Resposta correta: \( \textbf{a) -3, \, 0, \, 5} \), pois todos são números inteiros.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 7: Relação entre Racionais e Inteiros</h3>
+    <div class="question">
+        <strong>7. Qual das afirmações é verdadeira?</strong>
+        <ul>
+            <li><input type="radio" name="q7" id="q7a" value="a"> a) Todo número racional é também irracional.</li>
+            <li><input type="radio" name="q7" id="q7b" value="b"> b) Todo número inteiro é também racional.</li>
+            <li><input type="radio" name="q7" id="q7c" value="c"> c) Todo número natural é também irracional.</li>
+            <li><input type="radio" name="q7" id="q7d" value="d"> d) Nenhum número racional é inteiro.</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(7)">Ver Resolução</a>
+    <div id="solution-7" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Resposta correta: \( \textbf{b) Todo número inteiro é também racional} \), pois inteiros podem ser representados como frações com denominador 1.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 8: Classificação de Números</h3>
+    <div class="question">
+        <strong>8. Classifique os seguintes números em racionais ou irracionais:</strong>
+        <ul>
+            <li>a) \( 0,333\ldots \) (dízima periódica)</li>
+            <li>b) \( \sqrt{10} \)</li>
+            <li>c) \( \frac{-7}{3} \)</li>
+            <li>d) \( \pi \)</li>
+            <li>e) \( -2 \)</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(8)">Ver Resolução</a>
+    <div id="solution-8" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            a) Racional. <br>
+            b) Irracional. <br>
+            c) Racional. <br>
+            d) Irracional. <br>
+            e) Racional (também inteiro). <br>
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 9: Conjuntos Numéricos na Prática</h3>
+    <div class="question">
+        <strong>
+            9. Um comerciante lucrou \( 500 \) reais em um dia e teve prejuízo de \( 200 \) reais no outro. Considere os lucros como números positivos e os prejuízos como números negativos. Qual é o saldo final?
+        </strong>
+        <ul>
+            <li><input type="radio" name="q9" id="q9a" value="a"> a) \( +700 \)</li>
+            <li><input type="radio" name="q9" id="q9b" value="b"> b) \( -300 \)</li>
+            <li><input type="radio" name="q9" id="q9c" value="c"> c) \( +300 \)</li>
+            <li><input type="radio" name="q9" id="q9d" value="d"> d) \( -500 \)</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(9)">Ver Resolução</a>
+    <div id="solution-9" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Saldo final: \( +500 - 200 = +300 \). <br>
+            Resposta correta: \( \textbf{c) +300} \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 10: Intervalos Numéricos</h3>
+    <div class="question">
+        <strong>
+            10. Considere o intervalo \( [-3, 5] \). Quantos números inteiros pertencem a esse intervalo?
+        </strong>
+        <ul>
+            <li><input type="radio" name="q10" id="q10a" value="a"> a) 6</li>
+            <li><input type="radio" name="q10" id="q10b" value="b"> b) 7</li>
+            <li><input type="radio" name="q10" id="q10c" value="c"> c) 8</li>
+            <li><input type="radio" name="q10" id="q10d" value="d"> d) 9</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(10)">Ver Resolução</a>
+    <div id="solution-10" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Os números inteiros no intervalo são: \( -3, -2, -1, 0, 1, 2, 3, 4, 5 \). Total: \( 9 \). <br>
+            Resposta correta: \( \textbf{d) 9} \).
+        </p>
+    </div>
+</div>
+
+	
+</body>
+</html>
+
+
+    <script>
+		function revealAllSolutions() {
+    for (let i = 1; i <= 47; i++) {
+        const solution = document.getElementById(`solution-${i}`);
+        if (solution) {
+            solution.style.display = "block";
+        }
+    }
+}
+	
+        function toggleSolution(id) {
+            const solution = document.getElementById(`solution-${id}`);
+            solution.style.display = solution.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>

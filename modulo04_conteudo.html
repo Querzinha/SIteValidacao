@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 4: Frações</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+        p, li {
+            margin-bottom: 15px;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        strong {
+            color: #333;
+        }
+        .formula {
+            background-color: #fff;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .dica {
+            background-color: #e7f5ff;
+            border-left: 6px solid #0056b3;
+            padding: 10px 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .dica strong {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Módulo 4: Frações</h1>
+
+    <!-- Introdução -->
+    <div class="section">
+        <h2>Introdução às Frações</h2>
+        <p>Frações são usadas para expressar partes de um todo ou dividir algo igualmente. Elas estão presentes em diversas áreas do cotidiano, como na culinária, no comércio e na engenharia.</p>
+        <p><strong>Exemplos do mundo real:</strong></p>
+        <ul>
+            <li>Receitas de culinária: \( \frac{1}{2} \) de uma xícara de açúcar e \( \frac{3}{4} \) de uma colher de chá de sal.</li>
+            <li>Medidas de distância: Um maratonista correu \( \frac{3}{5} \) da prova antes de parar para beber água.</li>
+            <li>Divisão de custos: Um grupo divide uma conta de R$ 100 igualmente entre 3 pessoas. Cada um paga \( \frac{100}{3} \) reais.</li>
+        </ul>
+    </div>
+
+    <!-- Conceitos Básicos -->
+    <div class="section">
+        <h2>Conceitos Básicos</h2>
+        <p><strong>Frações Próprias:</strong> Numerador menor que o denominador (\( \frac{3}{4}, \frac{7}{10} \)).</p>
+        <p><strong>Frações Impróprias:</strong> Numerador maior ou igual ao denominador (\( \frac{5}{3}, \frac{9}{9} \)).</p>
+        <p><strong>Número Misto:</strong> Combinação de um número inteiro e uma fração (\( 2 \frac{1}{3} \)).</p>
+    </div>
+	<div class="section">
+    <h2>Representação Gráfica de Frações</h2>
+    <p>Gráficos de pizza são uma forma visual de representar frações. Cada fatia representa uma parte do todo. Abaixo estão exemplos de como diferentes frações podem ser representadas em uma pizza.</p>
+
+    <!-- Representação de 1/8 -->
+    <div class="pizza-example">
+        <h3>Exemplo 1: 2/8</h3>
+        <p>Uma fatia de pizza representa 2/8 do todo.</p>
+        <svg width="200" height="200" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="50" fill="#f4a261"></circle>
+            <path d="M50,50 L100,50 A50,50 0 0,1 50,0 Z" fill="#e76f51"></path>
+        </svg>
+    </div>
+
+    <!-- Representação de 4/8 (meia pizza) -->
+    <div class="pizza-example">
+        <h3>Exemplo 2: 4/8</h3>
+        <p>Quatro fatias representam metade da pizza, ou 4/8, que pode ser simplificado para 1/2.</p>
+        <svg width="200" height="200" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="50" fill="#f4a261"></circle>
+            <path d="M50,50 L100,50 A50,50 0 0,1 50,0 Z" fill="#e76f51"></path>
+            <path d="M50,50 L50,0 A50,50 0 0,1 0,50 Z" fill="#e76f51"></path>
+        </svg>
+    </div>
+
+    <!-- Representação de 5/8 -->
+    <div class="pizza-example">
+        <h3>Exemplo 3: 6/8</h3>
+        <p>Cinco fatias representam 6/8 do todo.</p>
+        <svg width="200" height="200" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="50" fill="#f4a261"></circle>
+            <path d="M50,50 L100,50 A50,50 0 0,1 50,0 Z" fill="#e76f51"></path>
+            <path d="M50,50 L50,0 A50,50 0 0,1 0,50 Z" fill="#e76f51"></path>
+            <path d="M50,50 L0,50 A50,50 0 0,1 50,100 Z" fill="#e76f51"></path>
+        </svg>
+    </div>
+</div>
+
+
+
+    <!-- Operações com Frações -->
+<div class="section">
+    <h2>Operações com Frações</h2>
+    
+    <h3>Adição e Subtração</h3>
+    <p>Adição e subtração de frações requerem que todas as frações envolvidas tenham o mesmo denominador. Quando os denominadores forem diferentes, siga estes passos:</p>
+    <ol>
+        <li>Encontre o menor múltiplo comum (MMC) dos denominadores.</li>
+        <li>Converta todas as frações para que tenham esse denominador comum.</li>
+        <li>Some ou subtraia os numeradores e mantenha o denominador.</li>
+    </ol>
+    <p>Exemplo:</p>
+    <div class="formula">
+        \[
+        \frac{2}{3} + \frac{1}{6} = \frac{4}{6} + \frac{1}{6} = \frac{5}{6}
+        \]
+    </div>
+    <div class="dica">
+        <strong>Dica da Tia Quérzia:</strong> O denominador comum facilita a soma e a subtração. Lembre-se de simplificar a fração, se possível!
+    </div>
+
+    <h3>Multiplicação</h3>
+    <p>A multiplicação de frações é simples porque não exige denominadores comuns. Basta seguir os passos abaixo:</p>
+    <ol>
+        <li>Multiplique os numeradores para obter o numerador do resultado.</li>
+        <li>Multiplique os denominadores para obter o denominador do resultado.</li>
+        <li>Simplifique a fração final, se necessário.</li>
+    </ol>
+    <p>Exemplo:</p>
+    <div class="formula">
+        \[
+        \frac{3}{4} \times \frac{2}{5} = \frac{6}{20} = \frac{3}{10}
+        \]
+    </div>
+    <div class="dica">
+        <strong>Dica da Tia Quérzia:</strong> Antes de multiplicar, veja se é possível simplificar as frações cruzando os valores de numeradores e denominadores.
+    </div>
+
+    <h3>Divisão</h3>
+    <p>A divisão de frações é baseada no conceito de multiplicar pela inversa da segunda fração (ou divisor). Siga os passos:</p>
+    <ol>
+        <li>Inverta a segunda fração (troque numerador com denominador).</li>
+        <li>Multiplique as frações normalmente.</li>
+        <li>Simplifique o resultado, se necessário.</li>
+    </ol>
+    <p>Exemplo:</p>
+    <div class="formula">
+        \[
+        \frac{5}{6} \div \frac{3}{4} = \frac{5}{6} \times \frac{4}{3} = \frac{20}{18} = \frac{10}{9}
+        \]
+    </div>
+    <div class="dica">
+        <strong>Dica da Tia Quérzia:</strong> Lembre-se de simplificar antes ou depois de realizar a multiplicação para evitar números muito grandes.
+    </div>
+</div>
+<!-- Conversão Fração-Decimal -->
+<div class="section">
+    <h2>Conversão entre Fração e Decimal</h2>
+    
+    <h3>Fração para Decimal</h3>
+    <p>Converter uma fração em decimal é um processo simples que envolve dividir o numerador (número de cima) pelo denominador (número de baixo). Isso é especialmente útil em contextos onde números decimais são mais fáceis de interpretar, como medições ou preços.</p>
+    <p><strong>Passos:</strong></p>
+    <ol>
+        <li>Verifique se o numerador é menor, igual ou maior que o denominador.</li>
+        <li>Divida o numerador pelo denominador usando a divisão longa ou calculadora.</li>
+        <li>Se o resultado tiver muitas casas decimais, arredonde conforme necessário.</li>
+    </ol>
+    <p><strong>Exemplos:</strong></p>
+    <div class="formula">
+        \[
+        \frac{1}{4} = 1 \div 4 = 0,25
+        \]
+        \[
+        \frac{7}{3} = 7 \div 3 = 2,333\ldots \quad (\text{ou } 2,33 \text{ arredondado a duas casas decimais})
+        \]
+    </div>
+    <div class="dica">
+        <strong>Dica da Tia Quérzia:</strong> Frações com denominadores como 10, 100 ou 1000 são mais fáceis de converter. Basta mover a vírgula para a esquerda o número de zeros no denominador.
+    </div>
+    
+    <h3>Decimal para Fração</h3>
+    <p>Para converter um número decimal em fração, você precisa identificar a posição do número após a vírgula. Cada casa decimal corresponde a uma potência de 10:</p>
+    <ul>
+        <li>1 casa decimal (\(0,1\)) = décimos (\( \frac{1}{10} \))</li>
+        <li>2 casas decimais (\(0,01\)) = centésimos (\( \frac{1}{100} \))</li>
+        <li>3 casas decimais (\(0,001\)) = milésimos (\( \frac{1}{1000} \))</li>
+    </ul>
+    <p><strong>Passos:</strong></p>
+    <ol>
+        <li>Escreva o número decimal como uma fração com denominador sendo uma potência de 10 (10, 100, 1000, etc.).</li>
+        <li>Simplifique a fração, dividindo numerador e denominador pelo maior divisor comum (MDC).</li>
+    </ol>
+    <p><strong>Exemplos:</strong></p>
+    <div class="formula">
+        \[
+        0,75 = \frac{75}{100} = \frac{3}{4}
+        \]
+        \[
+        0,125 = \frac{125}{1000} = \frac{1}{8}
+        \]
+    </div>
+    
+    <h3>Fração Periódica para Decimal</h3>
+    <p>Alguns decimais possuem padrões repetidos, como \( 0,333\ldots \) ou \( 0,142857142857\ldots \). Esses são chamados de <strong>decimais periódicos</strong>. Para converter uma fração periódica em decimal:</p>
+    <ol>
+        <li>Identifique o padrão que se repete no decimal.</li>
+        <li>Escreva a fração correspondente ao padrão.</li>
+        <li>Simplifique, se necessário.</li>
+    </ol>
+    <p><strong>Exemplos:</strong></p>
+    <div class="formula">
+        \[
+        0,333\ldots = \frac{1}{3}
+        \]
+        \[
+        0,142857142857\ldots = \frac{1}{7}
+        \]
+    </div>
+    
+    <div class="dica">
+        <strong>Dica da Tia Quérzia:</strong> Use frações periódicas quando encontrar padrões repetidos nos decimais. Elas economizam tempo em cálculos!
+    </div>
+    
+    <h3>Aplicações Práticas</h3>
+    <p>Conversões entre frações e decimais são usadas frequentemente em:</p>
+    <ul>
+        <li><strong>Culinária:</strong> Converter receitas que misturam medidas fracionárias e decimais.</li>
+        <li><strong>Construção:</strong> Trabalhar com medidas precisas, como 2,5 metros ou \( \frac{3}{4} \) polegadas.</li>
+        <li><strong>Finanças:</strong> Calcular taxas de juros ou descontos em forma de fração ou porcentagem.</li>
+    </ul>
+</div>
+
+<h3>Exemplo 1: Preparação de Feijoada</h3>
+<p>Uma cozinheira está preparando feijoada para um evento e possui 15 kg de feijão preto. Ela quer dividir igualmente o feijão em recipientes de \( \frac{3}{4} \)-kg cada para facilitar o cozimento por porções. Quantos recipientes ela conseguirá preencher?</p>
+<div class="formula">
+    \[
+    15 \div \frac{3}{4} = 15 \times \frac{4}{3} = \frac{60}{3} = 20 \, \text{recipientes.}
+    \]
+</div>
+<p><strong>Resposta:</strong> A cozinheira conseguirá preencher 20 recipientes de \( \frac{3}{4} \)-kg cada.</p>
+
+
+    <!-- Conclusão -->
+    <div class="section">
+        <h2>Conclusão</h2>
+        <p>Frações são ferramentas essenciais para resolver problemas do cotidiano. Com prática, elas se tornam intuitivas e úteis.</p>
+        <div class="dica">
+            <strong>Mensagem da Tia Quérzia:</strong> Pratique bastante! Quanto mais você usar frações, mais fácil será entendê-las.
+        </div>
+    </div>
+</body>
+</html>

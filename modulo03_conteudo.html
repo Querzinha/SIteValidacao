@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 3: Números Inteiros (Positivos e Negativos)</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+        p, li {
+            margin-bottom: 15px;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        strong {
+            color: #333;
+        }
+        .formula {
+            background-color: #fff;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .dica {
+            background-color: #e7f5ff;
+            border-left: 6px solid #0056b3;
+            padding: 10px 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .dica strong {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Módulo 3: Números Inteiros (Positivos e Negativos)</h1>
+
+    <!-- Introdução -->
+    <div class="section">
+        <h2>Introdução</h2>
+        <p>Os números inteiros incluem os números naturais (0, 1, 2, 3, ...) e seus opostos negativos (-1, -2, -3, ...). Eles são amplamente usados para representar situações de ganho, perda, elevação e queda.</p>
+        <p><strong>Aplicações no mundo real:</strong></p>
+        <ul>
+            <li><strong>Temperaturas:</strong> Representação de temperaturas acima e abaixo de zero (ex.: +30°C e -10°C).</li>
+            <li><strong>Finanças:</strong> Ganhos e dívidas (ex.: +R$ 500,00 de lucro, -R$ 200,00 de despesa).</li>
+            <li><strong>Altitudes:</strong> Altura acima do nível do mar (ex.: +800 m) e profundidade abaixo do nível do mar (ex.: -500 m).</li>
+            <li><strong>Esportes:</strong> Pontuação em jogos (ex.: +3 para vitórias, -1 para faltas).</li>
+            <li><strong>Balanço de energia:</strong> Consumo e produção de energia (ex.: +10 kWh gerados, -15 kWh consumidos).</li>
+            <li><strong>História e datas:</strong> Representação de anos antes e depois de Cristo (ex.: +2023, -500).</li>
+        </ul>
+        <p>Essas aplicações mostram como os números inteiros ajudam a descrever situações práticas e simplificam a resolução de problemas cotidianos.</p>
+    </div>
+
+    <!-- Teoria -->
+    <div class="section">
+        <h2>Teoria: Operações com Números Inteiros</h2>
+        <h3>1. Adição de Números Inteiros</h3>
+        <p><strong>Regra Geral:</strong></p>
+        <ul>
+            <li><strong>Sinais Iguais:</strong> Some os valores absolutos e mantenha o sinal.</li>
+            <div class="formula">(+5) + (+3) = +8</div>
+            <div class="formula">(-4) + (-6) = -10</div>
+            <li><strong>Sinais Diferentes:</strong> Subtraia os valores absolutos e mantenha o sinal do maior.</li>
+            <div class="formula">(+7) + (-4) = +3</div>
+            <div class="formula">(-8) + (+5) = -3</div>
+        </ul>
+        <div class="dica"><strong>Dica da Tia Quérzia:</strong> "Se estiver somando dois números negativos, pense em uma dívida: somar dívidas é o mesmo que aumentar a dívida total!"</div>
+
+		<h3>2. Subtração de Números Inteiros</h3>
+		<p>A subtração de números inteiros pode ser explicada sem introduzir diretamente o conceito de "transformar a subtração em adição". Em vez disso, podemos usar analogias práticas, como temperaturas ou dinheiro, para tornar o aprendizado mais intuitivo.</p>
+
+		<h4>1. Temperatura: Subindo e Descendo na Escala</h4>
+		<p>Imagine que você está observando a temperatura:</p>
+		<ul>
+			<li><strong>Exemplo 1:</strong> A temperatura está em +5°C, e ela cai 3°C.
+				<div class="formula">+5°C - 3°C = +2°C</div>
+				Explicação: Se você tira 3 graus de 5, vai parar no +2 na escala.
+			</li>
+			<li><strong>Exemplo 2:</strong> A temperatura está em −7°C, e ela sobe 4°C.
+				<div class="formula">−7°C + 4°C = −3°C</div>
+				Explicação: Saindo do −7 e subindo 4, você chega ao −3.
+			</li>
+			<li><strong>Exemplo 3:</strong> A temperatura está em +3°C, e ela cai 5°C.
+				<div class="formula">+3°C - 5°C = −2°C</div>
+				Explicação: Você desceu 5 graus partindo do +3 e acabou abaixo de zero.
+			</li>
+		</ul>
+
+		<h4>2. Dinheiro: Dívidas e Saldo</h4>
+		<p>Outra analogia útil envolve pensar em dinheiro:</p>
+		<ul>
+			<li><strong>Exemplo 1:</strong> Você tem R$ 5,00 e paga uma dívida de R$ 3,00.
+				<div class="formula">5 - 3 = +2</div>
+				Explicação: Você ainda tem R$ 2,00 sobrando.
+			</li>
+			<li><strong>Exemplo 2:</strong> Você deve R$ 7,00 e paga R$ 4,00.
+				<div class="formula">−7 + 4 = −3</div>
+				Explicação: Depois de pagar parte da dívida, você ainda deve R$ 3,00.
+			</li>
+			<li><strong>Exemplo 3:</strong> Você tem R$ 3,00, mas pega emprestado R$ 5,00.
+				<div class="formula">3 - 5 = −2</div>
+				Explicação: Você entrou em uma dívida de R$ 2,00.
+			</li>
+		</ul>
+
+		<h4>Regras com uma Abordagem Mais Contextual</h4>
+		<p><strong>Regra Geral para Subtração:</strong></p>
+		<ul>
+			<li>Subtrair um número significa diminuir esse valor, o que pode resultar em passar para o lado positivo ou negativo da reta numérica.</li>
+			<li>Quando você subtrai um número maior de um número menor, o resultado será negativo.
+				<div class="formula">3 - 5 = −2</div>
+			</li>
+			<li>Quando você subtrai um número menor de um número maior, o resultado será positivo.
+				<div class="formula">5 - 3 = +2</div>
+			</li>
+		</ul>
+
+		<h4>Regra para "Dois Sinais Juntos":</h4>
+		<ul>
+			<li>(+) e (+): Siga normalmente.
+				<div class="formula">+5 + 3 = +8</div>
+			</li>
+			<li>(−) e (−): Os sinais se anulam.
+				<div class="formula">5 − (−3) = 5 + 3 = 8</div>
+			</li>
+			<li>(−) e (+): Subtração normal.
+				<div class="formula">5 − 3 = +2</div>
+			</li>
+		</ul>
+		<div class="dica"><strong>Dica da Tia Quérzia:</strong> "Use analogias como dívidas e escalas para se familiarizar com os conceitos antes de passar para a formalidade matemática!"</div>
+        <h3>3. Multiplicação de Números Inteiros</h3>
+        <p><strong>Regra Geral:</strong></p>
+        <ul>
+            <li><strong>Sinais Iguais:</strong> Produto é positivo.</li>
+            <div class="formula">(+6) × (+4) = +24</div>
+            <div class="formula">(-3) × (-2) = +6</div>
+            <li><strong>Sinais Diferentes:</strong> Produto é negativo.</li>
+            <div class="formula">(+5) × (-2) = -10</div>
+            <div class="formula">(-4) × (+3) = -12</div>
+        </ul>
+        <div class="dica"><strong>Dica da Tia Quérzia:</strong> "Na multiplicação, pense: amigos multiplicam coisas boas, inimigos multiplicam coisas ruins!"</div>
+
+        <h3>4. Divisão de Números Inteiros</h3>
+        <p><strong>Regra Geral:</strong></p>
+        <ul>
+            <li><strong>Sinais Iguais:</strong> Quociente é positivo.</li>
+            <div class="formula">(+12) ÷ (+3) = +4</div>
+            <div class="formula">(-15) ÷ (-5) = +3</div>
+            <li><strong>Sinais Diferentes:</strong> Quociente é negativo.</li>
+            <div class="formula">(+16) ÷ (-4) = -4</div>
+            <div class="formula">(-18) ÷ (+6) = -3</div>
+        </ul>
+        <div class="dica"><strong>Dica da Tia Quérzia:</strong> "Lembre-se: dividir algo entre iguais sempre resulta em algo positivo, mas se há um conflito de sinais, o resultado é negativo!"</div>
+    </div>
+
+    <!-- Prática -->
+    <div class="section">
+        <h2>Prática: Aplicações Reais</h2>
+        <h3>1. Balanço Financeiro</h3>
+        <p>João começou o mês com R$ 300, gastou R$ 150 e recebeu R$ 200. Qual é o saldo final?</p>
+        <div class="formula">300 - 150 + 200 = 350</div>
+
+        <h3>2. Temperaturas</h3>
+        <p>Em uma cidade, a temperatura diurna foi de +25°C e à noite caiu para -5°C. Qual foi a variação?</p>
+        <div class="formula">+25 - (-5) = +25 + 5 = +30°C</div>
+
+        <h3>3. Altitudes</h3>
+        <p>Um mergulhador começou a 0 metros (nível do mar), desceu 30 metros, subiu 15 metros e desceu mais 10 metros. Qual foi a posição final?</p>
+        <div class="formula">0 - 30 + 15 - 10 = -25 metros</div>
+    </div>
+
+    <!-- Exercícios -->
+    <div class="section">
+        <h2>Exercícios de Fixação</h2>
+        <ol>
+            <li>Calcule: \( (+12) + (-8) \)</li>
+            <li>Calcule: \( (-15) - (+10) \)</li>
+            <li>Calcule: \( (-6) × (+3) \)</li>
+            <li>Calcule: \( (+48) ÷ (-8) \)</li>
+        </ol>
+    </div>
+
+    <!-- Conclusão -->
+    <div class="section">
+        <h2>Conclusão</h2>
+        <p>Números inteiros são essenciais para representar ganhos, perdas e diversas situações práticas do dia a dia. Com prática, as operações se tornam automáticas e rápidas!</p>
+        <div class="dica"><strong>Mensagem da Tia Quérzia:</strong> "Treine, pratique, e os números inteiros serão seus melhores aliados!"</div>
+    </div>
+</body>
+</html>

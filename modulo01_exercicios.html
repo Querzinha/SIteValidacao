@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Fixação e Anotações</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+            background-color: #f4f8fb;
+        }
+		.content {
+			width: 100%
+			overflow-y: auto;
+			padding: 20px;
+		}
+		.
+        h1, h2 {
+            color: #0056b3;
+        }
+        .exercise {
+            margin-bottom: 40px;
+        }
+        .exercise h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .exercise .question {
+            background: #eaf3fc;
+            border: 1px solid #0056b3;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .exercise .solution {
+            background: #d4edda;
+            border: 1px solid #28a745;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 10px;
+            display: none;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #0056b3;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #004494;
+        }
+        .side-panel h2 {
+            color: #0056b3;
+        }
+        canvas {
+            border: 1px solid #ddd;
+            width: 100%;
+            height: calc(100% - 60px);
+        }
+        .btn-clear {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Exercícios de Fixação - Módulo 1</h1>
+       <!-- Adição -->
+    
+	<div class="exercise">
+    <h3>Exercício 1: Adição</h3>
+    <!-- Subquestão 1 -->
+    <div class="question">
+        <strong>1. Calcule:</strong> \( 124 + 237 \)
+    </div>
+    <a class="btn" onclick="toggleSolution(1)">Ver Resolução</a>
+    <div id="solution-1" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            \( 124 + 237 = 361 \)
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <!-- Subquestão 2 -->
+    <div class="question">
+        <strong>2. Calcule:</strong> \( 456 + 789 \)
+    </div>
+    <a class="btn" onclick="toggleSolution(2)">Ver Resolução</a>
+    <div id="solution-2" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            \( 456 + 789 = 1245 \)
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <!-- Subquestão 3 -->
+    <div class="question">
+        <strong>3. Calcule:</strong> \( 3421 + 6789 \)
+    </div>
+    <a class="btn" onclick="toggleSolution(3)">Ver Resolução</a>
+    <div id="solution-3" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            \( 3421 + 6789 = 10210 \)
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 2: Complete com os números que faltam</h3>
+    <!-- Subquestão 4 -->
+    <div class="question">
+        \( 250 + \_ = 600 \)
+    </div>
+    <a class="btn" onclick="toggleSolution(4)">Ver Resolução</a>
+    <div id="solution-4" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Para \( 250 + x = 600 \), \( x = 600 - 250 = 350 \).<br>
+            Resposta: \( 350 \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <!-- Subquestão 5 -->
+    <div class="question">
+        \( \_ + 345 = 789 \)
+    </div>
+    <a class="btn" onclick="toggleSolution(5)">Ver Resolução</a>
+    <div id="solution-5" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Para \( x + 345 = 789 \), \( x = 789 - 345 = 444 \).<br>
+            Resposta: \( 444 \).
+        </p>
+    </div>
+</div>
+<div class="exercise">
+    <h3>Exercício 3: Subtração</h3>
+    <!-- Subquestão 1 -->
+    <div class="question">
+        <strong>1. Resolva:</strong> \( 825 - 463 \)
+    </div>
+    <a class="btn" onclick="toggleSolution(6)">Ver Resolução</a>
+    <div id="solution-6" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            \( 825 - 463 = 362 \)
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <!-- Subquestão 2 -->
+    <div class="question">
+        \( 1000 - 789 \)
+    </div>
+    <a class="btn" onclick="toggleSolution(7)">Ver Resolução</a>
+    <div id="solution-7" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            \( 1000 - 789 = 211 \)
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <!-- Subquestão 3 -->
+    <div class="question">
+        \( 5423 - 1345 \)
+    </div>
+    <a class="btn" onclick="toggleSolution(8)">Ver Resolução</a>
+    <div id="solution-8" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            \( 5423 - 1345 = 4078 \)
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 4: Multiplicação</h3>
+    <!-- Subquestão 1 -->
+    <div class="question">
+        <strong>1. Calcule:</strong> \( 25 \times 12 \)
+    </div>
+    <a class="btn" onclick="toggleSolution(9)">Ver Resolução</a>
+    <div id="solution-9" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            \( 25 \times 12 = 300 \)
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <!-- Subquestão 2 -->
+    <div class="question">
+        \( 48 \times 23 \)
+    </div>
+    <a class="btn" onclick="toggleSolution(10)">Ver Resolução</a>
+    <div id="solution-10" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            \( 48 \times 23 = 1104 \)
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <!-- Subquestão 3 -->
+    <div class="question">
+        \( 102 \times 56 \)
+    </div>
+    <a class="btn" onclick="toggleSolution(11)">Ver Resolução</a>
+    <div id="solution-11" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            \( 102 \times 56 = 5712 \)
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 5: Divisão</h3>
+    <!-- Subquestão 1 -->
+    <div class="question">
+        <strong>1. Resolva:</strong> \( 144 \div 12 \)
+    </div>
+    <a class="btn" onclick="toggleSolution(12)">Ver Resolução</a>
+    <div id="solution-12" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            \( 144 \div 12 = 12 \)
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <!-- Subquestão 2 -->
+    <div class="question">
+        \( 756 \div 18 \)
+    </div>
+    <a class="btn" onclick="toggleSolution(13)">Ver Resolução</a>
+    <div id="solution-13" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            \( 756 \div 18 = 42 \)
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <!-- Subquestão 3 -->
+    <div class="question">
+        \( 1024 \div 32 \)
+    </div>
+    <a class="btn" onclick="toggleSolution(14)">Ver Resolução</a>
+    <div id="solution-14" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            \( 1024 \div 32 = 32 \)
+        </p>
+    </div>
+</div>
+<div class="exercise">
+    <h3>Exercício 6: Máximo Divisor Comum (MDC)</h3>
+    <!-- Subquestão 1 -->
+    <div class="question">
+        <strong>1. Determine o MDC entre:</strong> \( 36 \) e \( 48 \)
+    </div>
+    <a class="btn" onclick="toggleSolution(15)">Ver Resolução</a>
+    <div id="solution-15" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Fatores primos:<br>
+            \( 36 = 2^2 \times 3^2 \), \( 48 = 2^4 \times 3 \).<br>
+            Fatores comuns: \( 2^2 \), \( 3 \).<br>
+            \( MDC = 2^2 \times 3 = 12 \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <!-- Subquestão 2 -->
+    <div class="question">
+        <strong>2. Determine o MDC entre:</strong> \( 54 \) e \( 72 \)
+    </div>
+    <a class="btn" onclick="toggleSolution(16)">Ver Resolução</a>
+    <div id="solution-16" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Fatores primos:<br>
+            \( 54 = 2 \times 3^3 \), \( 72 = 2^3 \times 3^2 \).<br>
+            Fatores comuns: \( 2 \), \( 3^2 \).<br>
+            \( MDC = 2 \times 3^2 = 18 \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 7: Mínimo Múltiplo Comum (MMC)</h3>
+    <!-- Subquestão 1 -->
+    <div class="question">
+        <strong>1. Encontre o MMC entre:</strong> \( 4 \) e \( 6 \)
+    </div>
+    <a class="btn" onclick="toggleSolution(17)">Ver Resolução</a>
+    <div id="solution-17" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Fatores primos:<br>
+            \( 4 = 2^2 \), \( 6 = 2 \times 3 \).<br>
+            Tomando o maior expoente de cada fator: \( 2^2 \), \( 3 \).<br>
+            \( MMC = 2^2 \times 3 = 12 \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <!-- Subquestão 2 -->
+    <div class="question">
+        <strong>2. Encontre o MMC entre:</strong> \( 12 \) e \( 15 \)
+    </div>
+    <a class="btn" onclick="toggleSolution(18)">Ver Resolução</a>
+    <div id="solution-18" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Fatores primos:<br>
+            \( 12 = 2^2 \times 3 \), \( 15 = 3 \times 5 \).<br>
+            Tomando o maior expoente de cada fator: \( 2^2 \), \( 3 \), \( 5 \).<br>
+            \( MMC = 2^2 \times 3 \times 5 = 60 \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 8: Problemas Aplicados</h3>
+    <!-- Subquestão 1 -->
+    <div class="question">
+        <strong>1. Um comerciante tem 124 caixas e recebe mais 236. Quantas caixas ele tem agora?</strong>
+    </div>
+    <a class="btn" onclick="toggleSolution(19)">Ver Resolução</a>
+    <div id="solution-19" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            \( 124 + 236 = 360 \).<br>
+            Resposta: \( 360 \) caixas.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <!-- Subquestão 2 -->
+    <div class="question">
+        <strong>2. Um cliente comprou 1024 produtos e devolveu 215. Quantos produtos ficaram?</strong>
+    </div>
+    <a class="btn" onclick="toggleSolution(20)">Ver Resolução</a>
+    <div id="solution-20" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            \( 1024 - 215 = 809 \).<br>
+            Resposta: \( 809 \) produtos.
+        </p>
+    </div>
+</div>
+<div class="exercise">
+    <h3>Exercício 9: Problemas com MMC</h3>
+    <!-- Subquestão 1 -->
+    <div class="question">
+        <strong>1. Dois amigos vão à academia: um a cada 4 dias e outro a cada 6 dias. Em quantos dias eles irão juntos?</strong>
+    </div>
+    <a class="btn" onclick="toggleSolution(21)">Ver Resolução</a>
+    <div id="solution-21" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Calcular o \( MMC \) de \( 4 \) e \( 6 \):<br>
+            \( 4 = 2^2 \), \( 6 = 2 \times 3 \).<br>
+            Tomando o maior expoente de cada fator: \( 2^2 \), \( 3 \).<br>
+            \( MMC = 2^2 \times 3 = 12 \).<br>
+            Resposta: Eles se encontrarão juntos novamente em 12 dias.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <!-- Subquestão 2 -->
+    <div class="question">
+        <strong>2. Uma fábrica produz \( 125 \) peças por dia. Em quantos dias produzirá \( 5000 \) peças?</strong>
+    </div>
+    <a class="btn" onclick="toggleSolution(22)">Ver Resolução</a>
+    <div id="solution-22" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Divisão direta:<br>
+            \( 5000 \div 125 = 40 \).<br>
+            Resposta: Serão necessários 40 dias.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 10: Cálculo com MDC</h3>
+    <!-- Subquestão 1 -->
+    <div class="question">
+        <strong>1. Determine o \( MDC \) de \( 42 \) e \( 56 \).</strong>
+    </div>
+    <a class="btn" onclick="toggleSolution(23)">Ver Resolução</a>
+    <div id="solution-23" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Fatores primos:<br>
+            \( 42 = 2 \times 3 \times 7 \), \( 56 = 2^3 \times 7 \).<br>
+            Fatores comuns: \( 2 \), \( 7 \).<br>
+            \( MDC = 2 \times 7 = 14 \).<br>
+            Resposta: \( MDC = 14 \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <!-- Subquestão 2 -->
+    <div class="question">
+        <strong>2. Determine o \( MDC \) de \( 60 \) e \( 72 \).</strong>
+    </div>
+    <a class="btn" onclick="toggleSolution(24)">Ver Resolução</a>
+    <div id="solution-24" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Fatores primos:<br>
+            \( 60 = 2^2 \times 3 \times 5 \), \( 72 = 2^3 \times 3^2 \).<br>
+            Fatores comuns: \( 2^2 \), \( 3 \).<br>
+            \( MDC = 2^2 \times 3 = 12 \).<br>
+            Resposta: \( MDC = 12 \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 11: Problemas com Divisão e Multiplicação</h3>
+    <!-- Subquestão 1 -->
+    <div class="question">
+        <strong>1. Uma escola comprou \( 50 \) caixas de lápis, cada uma com \( 24 \) lápis. Quantos lápis foram comprados?</strong>
+    </div>
+    <a class="btn" onclick="toggleSolution(25)">Ver Resolução</a>
+    <div id="solution-25" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Multiplicação direta:<br>
+            \( 50 \times 24 = 1200 \).<br>
+            Resposta: \( 1200 \) lápis.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <!-- Subquestão 2 -->
+    <div class="question">
+        <strong>2. Um motorista percorreu \( 480 \) km em \( 8 \) horas. Qual foi a média de km por hora?</strong>
+    </div>
+    <a class="btn" onclick="toggleSolution(26)">Ver Resolução</a>
+    <div id="solution-26" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Divisão direta:<br>
+            \( 480 \div 8 = 60 \).<br>
+            Resposta: \( 60 \) km/h.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <!-- Subquestão 3 -->
+    <div class="question">
+        <strong>3. Uma fábrica produziu \( 960 \) peças e distribuiu igualmente para \( 12 \) lojas. Quantas peças cada loja recebeu?</strong>
+    </div>
+    <a class="btn" onclick="toggleSolution(27)">Ver Resolução</a>
+    <div id="solution-27" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Divisão direta:<br>
+            \( 960 \div 12 = 80 \).<br>
+            Resposta: \( 80 \) peças.
+        </p>
+    </div>
+</div>
+<div class="exercise">
+    <h3>Exercício 12: Problemas com MMC e MDC</h3>
+    <!-- Subquestão 1 -->
+    <div class="question">
+        <strong>1. Dois amigos decidem visitar um parque: um vai a cada \( 3 \) dias e o outro a cada \( 5 \) dias. Após quantos dias eles se encontrarão novamente no parque?</strong>
+    </div>
+    <a class="btn" onclick="toggleSolution(28)">Ver Resolução</a>
+    <div id="solution-28" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Calcular o \( MMC \) de \( 3 \) e \( 5 \):<br>
+            \( 3 = 3 \), \( 5 = 5 \) (primos distintos).<br>
+            \( MMC = 3 \times 5 = 15 \).<br>
+            Resposta: Eles se encontrarão novamente no parque em \( 15 \) dias.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <!-- Subquestão 2 -->
+    <div class="question">
+        <strong>2. Determine o \( MMC \) de \( 9 \) e \( 12 \).</strong>
+    </div>
+    <a class="btn" onclick="toggleSolution(29)">Ver Resolução</a>
+    <div id="solution-29" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Fatores primos:<br>
+            \( 9 = 3^2 \), \( 12 = 2^2 \times 3 \).<br>
+            Tomando o maior expoente de cada fator: \( 2^2 \), \( 3^2 \).<br>
+            \( MMC = 2^2 \times 3^2 = 36 \).<br>
+            Resposta: \( MMC = 36 \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 13: Problemas Práticos com MDC</h3>
+    <!-- Subquestão 1 -->
+    <div class="question">
+        <strong>1. Uma fábrica de biscoitos utiliza pacotes de farinha de \( 24 \) kg e pacotes de açúcar de \( 36 \) kg. Qual o maior peso que pode ser dividido igualmente entre os dois pacotes?</strong>
+    </div>
+    <a class="btn" onclick="toggleSolution(30)">Ver Resolução</a>
+    <div id="solution-30" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Calcular o \( MDC \) de \( 24 \) e \( 36 \):<br>
+            \( 24 = 2^3 \times 3 \), \( 36 = 2^2 \times 3^2 \).<br>
+            Fatores comuns: \( 2^2 \), \( 3 \).<br>
+            \( MDC = 2^2 \times 3 = 12 \).<br>
+            Resposta: O maior peso que pode ser dividido igualmente é \( 12 \) kg.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 14: Multiplicação e Divisão</h3>
+    <!-- Subquestão 1 -->
+    <div class="question">
+        <strong>1. Uma livraria vende \( 45 \) livros por semana. Quantos livros serão vendidos em \( 12 \) semanas?</strong>
+    </div>
+    <a class="btn" onclick="toggleSolution(31)">Ver Resolução</a>
+    <div id="solution-31" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Multiplicação direta:<br>
+            \( 45 \times 12 = 540 \).<br>
+            Resposta: Serão vendidos \( 540 \) livros.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <!-- Subquestão 2 -->
+    <div class="question">
+        <strong>2. Um caminhão transporta \( 1800 \) kg de carga e faz \( 15 \) entregas iguais. Quantos quilos são entregues por vez?</strong>
+    </div>
+    <a class="btn" onclick="toggleSolution(32)">Ver Resolução</a>
+    <div id="solution-32" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Divisão direta:<br>
+            \( 1800 \div 15 = 120 \).<br>
+            Resposta: Cada entrega será de \( 120 \) kg.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 15: Operações Mistas</h3>
+    <!-- Subquestão 1 -->
+    <div class="question">
+        <strong>1. Um grupo de amigos comprou \( 432 \) ingressos para um evento. Se cada pessoa receber \( 36 \) ingressos, quantas pessoas estão no grupo?</strong>
+    </div>
+    <a class="btn" onclick="toggleSolution(33)">Ver Resolução</a>
+    <div id="solution-33" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Divisão direta:<br>
+            \( 432 \div 36 = 12 \).<br>
+            Resposta: O grupo tem \( 12 \) pessoas.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 16: Problema com Adição e Multiplicação</h3>
+    <!-- Subquestão 1 -->
+    <div class="question">
+        <strong>1. Uma empresa produziu \( 125 \) peças por dia durante \( 15 \) dias. Quantas peças foram produzidas no total?</strong>
+    </div>
+    <a class="btn" onclick="toggleSolution(34)">Ver Resolução</a>
+    <div id="solution-34" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Multiplicação direta:<br>
+            \( 125 \times 15 = 1875 \).<br>
+            Resposta: Foram produzidas \( 1875 \) peças no total.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <!-- Subquestão 2 -->
+    <div class="question">
+        <strong>2. Um caminhão transporta \( 4500 \) kg de carga e faz \( 20 \) viagens iguais. Qual é o peso transportado em cada viagem?</strong>
+    </div>
+    <a class="btn" onclick="toggleSolution(35)">Ver Resolução</a>
+    <div id="solution-35" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Divisão direta:<br>
+            \( 4500 \div 20 = 225 \).<br>
+            Resposta: O caminhão transporta \( 225 \) kg por viagem.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 17: Problema com Subtração e Adição</h3>
+    <!-- Subquestão 1 -->
+    <div class="question">
+        <strong>1. Um cliente tinha \( 1200 \) reais em sua conta. Ele fez uma compra de \( 480 \) reais e depois recebeu um depósito de \( 300 \) reais. Qual é o saldo atual da conta?</strong>
+    </div>
+    <a class="btn" onclick="toggleSolution(36)">Ver Resolução</a>
+    <div id="solution-36" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Subtração e adição:<br>
+            Primeiro subtraímos a compra: \( 1200 - 480 = 720 \).<br>
+            Depois somamos o depósito: \( 720 + 300 = 1020 \).<br>
+            Resposta: O saldo atual é \( 1020 \) reais.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 18: Problema com MDC</h3>
+    <!-- Subquestão 1 -->
+    <div class="question">
+        <strong>1. Uma fábrica embala pacotes com \( 60 \) e \( 90 \) unidades de um produto. Qual o maior número de unidades que podem ser agrupadas igualmente nos dois pacotes?</strong>
+    </div>
+    <a class="btn" onclick="toggleSolution(37)">Ver Resolução</a>
+    <div id="solution-37" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Calcular o \( MDC \) de \( 60 \) e \( 90 \):<br>
+            \( 60 = 2^2 \times 3 \times 5 \), \( 90 = 2 \times 3^2 \times 5 \).<br>
+            Fatores comuns: \( 2 \), \( 3 \), \( 5 \).<br>
+            \( MDC = 2 \times 3 \times 5 = 30 \).<br>
+            Resposta: O maior número de unidades que podem ser agrupadas é \( 30 \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 19: Problema com MMC</h3>
+    <!-- Subquestão 1 -->
+    <div class="question">
+        <strong>1. Duas luzes piscam em tempos diferentes: uma a cada \( 4 \) segundos e outra a cada \( 6 \) segundos. Após quanto tempo elas irão piscar juntas novamente?</strong>
+    </div>
+    <a class="btn" onclick="toggleSolution(38)">Ver Resolução</a>
+    <div id="solution-38" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Calcular o \( MMC \) de \( 4 \) e \( 6 \):<br>
+            \( 4 = 2^2 \), \( 6 = 2 \times 3 \).<br>
+            Tomando o maior expoente de cada fator: \( 2^2 \), \( 3 \).<br>
+            \( MMC = 2^2 \times 3 = 12 \).<br>
+            Resposta: Elas irão piscar juntas novamente após \( 12 \) segundos.
+        </p>
+    </div>
+</div>
+
+
+<div class="exercise">
+    <h3>Exercício 20: Adição</h3>
+    <div class="question">
+        <strong>1. Um agricultor colheu 1243 maçãs no período da manhã e 987 à tarde. Quantas maçãs ele colheu no total?</strong>
+        <ul>
+            <li><input type="radio" name="q2" id="q2a" value="a"> a) 2230 </li>
+            <li><input type="radio" name="q2" id="q2b" value="b"> b) 2130</li>
+            <li><input type="radio" name="q2" id="q2c" value="c"> c) 2220</li>
+            <li><input type="radio" name="q2" id="q2d" value="d"> d) 2140</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(40)">Ver Resolução</a>
+    <div id="solution-40" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Maçãs colhidas de manhã: \( 1243 \) <br>
+            Maçãs colhidas à tarde: \( 987 \) <br>
+            Soma: \( 1243 + 987 = 2230 \) <br>
+            Resposta correta: \( \textbf{a) 2230} \).
+        </p>
+    </div>
+</div>
+
+
+<div class="exercise">
+    <div class="question">
+        <strong>02. Um agricultor colheu 1243 maçãs no período da manhã e 987 à tarde. Quantas maçãs ele colheu no total?</strong>
+        <ul>
+            <li><input type="radio" name="q2" id="q2a" value="a"> a) 2230 </li>
+            <li><input type="radio" name="q2" id="q2b" value="b"> b) 2130</li>
+            <li><input type="radio" name="q2" id="q2c" value="c"> c) 2220</li>
+            <li><input type="radio" name="q2" id="q2d" value="d"> d) 2140</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(41)">Ver Resolução</a>
+    <div id="solution-41" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Maçãs colhidas de manhã: \( 1243 \) <br>
+            Maçãs colhidas à tarde: \( 987 \) <br>
+            Soma: \( 1243 + 987 = 2230 \) <br>
+            Resposta correta: \( \textbf{a) 2230} \).
+        </p>
+    </div>
+</div>
+<div class="exercise">
+    <h3>Exercício 22: Multiplicação</h3>
+    <div class="question">
+        <strong>01. Uma padaria produz 125 pães por hora. Quantos pães serão produzidos em 8 horas de trabalho?</strong>
+        <ul>
+            <li><input type="radio" name="q3" id="q3a" value="a"> a) 1000 </li>
+            <li><input type="radio" name="q3" id="q3b" value="b"> b) 1050</li>
+            <li><input type="radio" name="q3" id="q3c" value="c"> c) 1100</li>
+            <li><input type="radio" name="q3" id="q3d" value="d"> d) 1200</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(42)">Ver Resolução</a>
+    <div id="solution-42" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Pães por hora: \( 125 \) <br>
+            Horas trabalhadas: \( 8 \) <br>
+            Multiplicação: \( 125 \times 8 = 1000 \) <br>
+            Resposta correta: \( \textbf{a) 1000} \).
+        </p>
+    </div>
+</div>
+<div class="exercise">
+    <h3>Exercício 23: Divisão</h3>
+    <div class="question">
+        <strong>23. Um caminhão transporta 2596 caixas. Se cada carga permite transportar 22 caixas por viagem, quantas viagens serão necessárias?</strong>
+        <ul>
+            <li><input type="radio" name="q4" id="q4a" value="a"> a) 118 </li>
+            <li><input type="radio" name="q4" id="q4b" value="b"> b) 108</li>
+            <li><input type="radio" name="q4" id="q4c" value="c"> c) 106</li>
+            <li><input type="radio" name="q4" id="q4d" value="d"> d) 112</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(43)">Ver Resolução</a>
+    <div id="solution-43" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Total de caixas: \( 2596 \) <br>
+            Capacidade por viagem: \( 22 \) <br>
+            Divisão: \( 2596 \div 22 = 118 \) <br>
+            Resposta correta: \( \textbf{a) 118} \).
+        </p>
+    </div>
+</div>
+<div class="exercise">
+    <h3>Exercício 24: Máximo Divisor Comum (MDC)</h3>
+    <div class="question">
+        <strong>24. Uma empresa precisa organizar caixas em fileiras. Há 36 e 48 caixas. Qual o maior número de caixas por fileira que pode ser organizado sem deixar sobras?</strong>
+        <ul>
+            <li><input type="radio" name="q5" id="q5a" value="a"> a) 12 </li>
+            <li><input type="radio" name="q5" id="q5b" value="b"> b) 6</li>
+            <li><input type="radio" name="q5" id="q5c" value="c"> c) 18</li>
+            <li><input type="radio" name="q5" id="q5d" value="d"> d) 24</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(44)">Ver Resolução</a>
+    <div id="solution-44" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Divisores de \( 36: 1, 2, 3, 4, 6, 9, 12, 18, 36 \) <br>
+            Divisores de \( 48: 1, 2, 3, 4, 6, 8, 12, 16, 24, 48 \) <br>
+            Divisores comuns: \( 1, 2, 3, 4, 6, 12 \) <br>
+            \( \textbf{MDC} = 12 \) <br>
+            Resposta correta: \( \textbf{a) 12} \).
+        </p>
+    </div>
+</div>
+
+
+
+
+<div class="exercise">
+    <h3>Exercício 6: Mínimo Múltiplo Comum (MMC)</h3>
+    <div class="question">
+        <strong>6. Dois ônibus saem do terminal no mesmo horário, um com intervalo de 6 minutos e outro com intervalo de 8 minutos. Após quantos minutos os dois sairão juntos novamente?</strong>
+        <ul>
+            <li><input type="radio" name="q6" id="q6a" value="a"> a) 24 </li>
+            <li><input type="radio" name="q6" id="q6b" value="b"> b) 48</li>
+            <li><input type="radio" name="q6" id="q6c" value="c"> c) 36</li>
+            <li><input type="radio" name="q6" id="q6d" value="d"> d) 12</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(45)">Ver Resolução</a>
+    <div id="solution-45" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Intervalos: \( 6 \) e \( 8 \) <br>
+            Fatores primos: \( 6 = 2 \times 3 \), \( 8 = 2^3 \) <br>
+            Tomando o maior expoente: \( 2^3 \) e \( 3 \) <br>
+            \( MMC = 2^3 \times 3 = 24 \) <br>
+            Resposta correta: \( \textbf{a) 24} \).
+        </p>
+    </div>
+</div>
+<div class="exercise">
+    <h3>Exercício 7: Multiplicação e Divisão</h3>
+    <div class="question">
+        <strong>7. Um armazém possui 1320 caixas que precisam ser distribuídas igualmente entre 12 caminhões. Quantas caixas cada caminhão transportará?</strong>
+        <ul>
+            <li><input type="radio" name="q7" id="q7a" value="a"> a) 110 </li>
+            <li><input type="radio" name="q7" id="q7b" value="b"> b) 100</li>
+            <li><input type="radio" name="q7" id="q7c" value="c"> c) 115</li>
+            <li><input type="radio" name="q7" id="q7d" value="d"> d) 120</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(46)">Ver Resolução</a>
+    <div id="solution-46" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Total de caixas: \( 1320 \) <br>
+            Número de caminhões: \( 12 \) <br>
+            Divisão: \( 1320 \div 12 = 110 \) <br>
+            Resposta correta: \( \textbf{a) 110} \).
+        </p>
+    </div>
+</div>
+<div class="exercise">
+    <h3>Exercício 8: Adição e Subtração</h3>
+    <div class="question">
+        <strong>8. Um comerciante tinha 250 caixas de frutas. Ele vendeu 75 e comprou mais 150. Quantas caixas ele tem agora?</strong>
+        <ul>
+            <li><input type="radio" name="q8" id="q8a" value="a"> a) 325 </li>
+            <li><input type="radio" name="q8" id="q8b" value="b"> b) 375</li>
+            <li><input type="radio" name="q8" id="q8c" value="c"> c) 300</li>
+            <li><input type="radio" name="q8" id="q8d" value="d"> d) 275</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(47)">Ver Resolução</a>
+    <div id="solution-47" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Caixas iniciais: \( 250 \) <br>
+            Vendas: \( 75 \), Compras: \( 150 \) <br>
+            Cálculo: \( 250 - 75 + 150 = 325 \) <br>
+            Resposta correta: \( \textbf{a) 325} \).
+        </p>
+    </div>
+</div>
+
+<div style="text-align: center; margin: 20px 0;">
+    <button class="btn" onclick="revealAllSolutions()">Mostrar Todas as Resoluções</button>
+</div>
+
+
+
+	
+
+    </div>
+
+
+
+    <script>
+	
+function toggleAnnotations() {
+    const sidePanel = document.querySelector(".side-panel");
+    const content = document.querySelector(".content");
+    const button = document.querySelector("button[onclick='toggleAnnotations()']");
+
+    if (sidePanel.style.display === "none") {
+        // Exibir a área de anotações
+        sidePanel.style.display = "block";
+        content.style.width = "60%";
+        button.textContent = "Ocultar Área de Anotações";
+    } else {
+        // Ocultar a área de anotações
+        sidePanel.style.display = "none";
+        content.style.width = "100%";
+        button.textContent = "Exibir Área de Anotações";
+    }
+}
+
+
+	function revealAllSolutions() {
+    for (let i = 1; i <= 47; i++) {
+        const solution = document.getElementById(`solution-${i}`);
+        if (solution) {
+            solution.style.display = "block";
+        }
+    }
+}
+
+	
+        // Toggle solution visibility
+        function toggleSolution(id) {
+            const solution = document.getElementById(`solution-${id}`);
+            solution.style.display = solution.style.display === "block" ? "none" : "block";
+        }
+
+        // Drawing functionality
+        const canvas = document.getElementById("drawingCanvas");
+        const ctx = canvas.getContext("2d");
+        let isDrawing = false;
+
+        canvas.addEventListener("mousedown", () => isDrawing = true);
+        canvas.addEventListener("mouseup", () => isDrawing = false);
+        canvas.addEventListener("mousemove", draw);
+
+        function draw(event) {
+            if (!isDrawing) return;
+            const rect = canvas.getBoundingClientRect();
+            ctx.lineWidth = 2;
+            ctx.lineCap = "round";
+            ctx.strokeStyle = "#0056b3";
+            ctx.lineTo(event.clientX - rect.left, event.clientY - rect.top);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(event.clientX - rect.left, event.clientY - rect.top);
+        }
+
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+    </script>
+</body>
+</html>

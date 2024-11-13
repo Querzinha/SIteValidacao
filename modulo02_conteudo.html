@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 2: Números Decimais e Frações</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+        p, li {
+            margin-bottom: 15px;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        strong {
+            color: #333;
+        }
+        .formula {
+            background-color: #fff;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .dica {
+            background-color: #e7f5ff;
+            border-left: 6px solid #0056b3;
+            padding: 10px 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .dica strong {
+            color: #0056b3;
+        }
+        .example {
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Módulo 2: Números Decimais e Frações</h1>
+
+    <!-- Introdução -->
+    <div class="section">
+        <h2>Introdução</h2>
+        <p>Os números decimais são uma extensão dos números naturais e inteiros, permitindo representações mais precisas em situações do dia a dia, como medir distâncias, realizar cálculos monetários e expressar frações. Eles são caracterizados pela presença de uma vírgula (ou ponto, em alguns países) que separa a parte inteira da parte decimal.</p>
+        <p>Exemplos de números decimais:</p>
+        <ul>
+            <li>3,14 (valor aproximado de \( \pi \))</li>
+            <li>7,5 (representa 7 unidades inteiras e 5 décimos)</li>
+            <li>R$ 12,75 (valor monetário com reais e centavos)</li>
+            <li>1,23 m (altura em metros)</li>
+            <li>9,81 m/s² (aceleração da gravidade)</li>
+        </ul>
+    </div>
+
+    <!-- Operações com Decimais -->
+    <div class="section">
+        <h2>Operações com Decimais: Dicas e Técnicas</h2>
+        <h3>Adição e Subtração</h3>
+        <p>Para somar ou subtrair números decimais:</p>
+        <ol>
+            <li>Alinhe os números pela vírgula.</li>
+            <li>Realize a operação como faria com números inteiros.</li>
+            <li>Mantenha a vírgula na mesma posição.</li>
+        </ol>
+        <div class="example">
+            <strong>Exemplo:</strong><br>
+            \(12,34 + 5,6\)<br>
+            <pre>
+              12,34
+            +  5,60
+            --------
+              17,94
+            </pre>
+        </div>
+        <div class="dica">
+            <strong>Dica da Tia Quérzia:</strong> Sempre preencha com zeros para que os números fiquem alinhados.
+        </div>
+
+        <h3>Técnica para Eliminar Casas Decimais</h3>
+        <p>Se a presença de vírgulas dificultar o cálculo, multiplique os números por 10, 100 ou 1000 (dependendo do número de casas decimais) para transformá-los em inteiros. Após realizar a operação, ajuste o resultado dividindo pelo mesmo valor.</p>
+        <div class="example">
+            <strong>Exemplo:</strong><br>
+            \(12,34 + 5,6\)<br>
+            Multiplique ambos por 100:<br>
+            \(1234 + 560 = 1794\)<br>
+            Ajuste o resultado dividindo por 100:<br>
+            \(17,94\)
+        </div>
+        <div class="dica">
+            <strong>Dica da Tia Quérzia:</strong> Essa técnica é especialmente útil para somar ou subtrair números longos e evitar erros no alinhamento das vírgulas.
+        </div>
+
+        <h3>Multiplicação</h3>
+        <p>Na multiplicação de números decimais:</p>
+        <ol>
+            <li>Ignore a vírgula e multiplique os números como inteiros.</li>
+            <li>Conte o total de casas decimais nos dois números.</li>
+            <li>Coloque a vírgula no resultado, contando o mesmo número de casas decimais.</li>
+        </ol>
+        <div class="example">
+            <strong>Exemplo:</strong><br>
+            \(2,5 \times 1,2\)<br>
+            Multiplique como inteiros: \(25 \times 12 = 300\)<br>
+            Ajuste o número de casas decimais (2 casas): \(3,00 = 3\)
+        </div>
+        <div class="dica">
+            <strong>Dica da Tia Quérzia:</strong> Se preferir, elimine as casas decimais multiplicando os números por potências de 10 antes de realizar o cálculo.
+        </div>
+
+        <h3>Divisão</h3>
+        <p>Na divisão de números decimais:</p>
+        <ol>
+            <li>Mova a vírgula do divisor para transformá-lo em um número inteiro.</li>
+            <li>Mova a vírgula do dividendo o mesmo número de casas decimais.</li>
+            <li>Realize a divisão normalmente.</li>
+        </ol>
+        <div class="example">
+            <strong>Exemplo:</strong><br>
+            \(42,5 \div 0,5\)<br>
+            Mova a vírgula: \(425 \div 5 = 85\)
+        </div>
+        <div class="dica">
+            <strong>Dica da Tia Quérzia:</strong> Multiplicar divisor e dividendo pela mesma potência de 10 facilita cálculos com divisores decimais.
+        </div>
+    </div>
+
+    <!-- Conclusão -->
+    <div class="section">
+        <h2>Conclusão</h2>
+        <p>Dominar números decimais e frações é essencial para resolver problemas do dia a dia. Use as dicas e técnicas para aprimorar suas habilidades e ganhar velocidade nos cálculos.</p>
+        <div class="dica">
+            <strong>Mensagem da Tia Quérzia:</strong> A prática é o segredo do sucesso. Resolva muitos exercícios e veja como sua confiança e agilidade aumentam!
+        </div>
+    </div>
+</body>
+</html>

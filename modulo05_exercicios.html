@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Números Decimais e Frações</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.8;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h3 {
+            color: #0056b3;
+        }
+        .exercise {
+            margin-bottom: 30px;
+        }
+        .exercise h3 {
+            margin-bottom: 10px;
+        }
+        .question {
+            background-color: #eaf3fc;
+            padding: 15px;
+            border-left: 4px solid #0056b3;
+            margin-bottom: 10px;
+        }
+        .solution {
+            background-color: #d4edda;
+            padding: 15px;
+            border-left: 4px solid #28a745;
+            display: none;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #0056b3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #004494;
+        }
+    </style>
+</head>
+<body>
+    
+	
+
+
+<div style="text-align: center; margin: 20px 0;">
+    <button class="btn" onclick="revealAllSolutions()">Mostrar Todas as Resoluções</button>
+</div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios - Transformações de Unidades</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .exercise {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+        .exercise h3 {
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+        .btn {
+            color: white;
+            background-color: #007bff;
+            border: none;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .solution {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+            background-color: #f1f1f1;
+        }
+    </style>
+    <script>
+        function toggleSolution(id) {
+            const solution = document.getElementById(`solution-${id}`);
+            solution.style.display = solution.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</head>
+<body>
+   <div class="exercise">
+    <h3>Exercício 1: Conversão de Volume</h3>
+    <div class="question">
+        <strong>1. Um tanque cúbico tem capacidade para armazenar exatamente 8 m³ de água. Sabendo que 1 m³ equivale a 1.000 litros, qual é a quantidade total de água, em litros, que o tanque pode conter?</strong>
+        <ul>
+            <li><input type="radio" name="q1" id="q1a" value="a"> a) 800 litros</li>
+            <li><input type="radio" name="q1" id="q1b" value="b"> b) 8.000 litros</li>
+            <li><input type="radio" name="q1" id="q1c" value="c"> c) 80.000 litros</li>
+            <li><input type="radio" name="q1" id="q1d" value="d"> d) 0,8 litros</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(1)">Ver Resolução</a>
+    <div id="solution-1" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Sabemos que \(1 \, \text{m}^3 = 1.000 \, \text{litros}\). Logo: <br>
+            \(8 \, \text{m}^3 \times 1.000 = 8.000 \, \text{litros}\). <br>
+            Resposta correta: b) 8.000 litros.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 2: Comparação de Áreas</h3>
+    <div class="question">
+        <strong>2. Um campo de futebol tem uma área de 0,72 hectares. Sabendo que 1 hectare equivale a 10.000 m², qual é a área do campo em metros quadrados?</strong>
+        <ul>
+            <li><input type="radio" name="q2" id="q2a" value="a"> a) 720 m²</li>
+            <li><input type="radio" name="q2" id="q2b" value="b"> b) 7.200 m²</li>
+            <li><input type="radio" name="q2" id="q2c" value="c"> c) 72.000 m²</li>
+            <li><input type="radio" name="q2" id="q2d" value="d"> d) 720.000 m²</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(2)">Ver Resolução</a>
+    <div id="solution-2" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Para converter hectares para metros quadrados, multiplicamos por \(10.000\): <br>
+            \(0,72 \, ha \times 10.000 = 7.200 \, m²\). <br>
+            Resposta correta: b) 7.200 m².
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 3: Densidade de Carga</h3>
+    <div class="question">
+        <strong>3. Uma embarcação está carregando 5.000 toneladas de carga em um compartimento com volume de 2.000 m³. Qual é a densidade da carga, em kg/m³?</strong>
+        <ul>
+            <li><input type="radio" name="q3" id="q3a" value="a"> a) 2,5 kg/m³</li>
+            <li><input type="radio" name="q3" id="q3b" value="b"> b) 250 kg/m³</li>
+            <li><input type="radio" name="q3" id="q3c" value="c"> c) 2.500 kg/m³</li>
+            <li><input type="radio" name="q3" id="q3d" value="d"> d) 25.000 kg/m³</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(3)">Ver Resolução</a>
+    <div id="solution-3" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Densidade é dada por \( \text{massa} / \text{volume} \): <br>
+            \(5.000 \, \text{t} = 5.000.000 \, \text{kg}\). <br>
+            \(5.000.000 \, \text{kg} / 2.000 \, \text{m}^3 = 2.500 \, \text{kg/m}^3\). <br>
+            Resposta correta: c) 2.500 kg/m³.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 4: Tempo de Navegação</h3>
+    <div class="question">
+        <strong>4. Um navio precisa percorrer 360 milhas náuticas. Sabendo que ele viaja a uma velocidade constante de 12 nós (milhas náuticas por hora), quanto tempo levará para concluir o trajeto?</strong>
+        <ul>
+            <li><input type="radio" name="q4" id="q4a" value="a"> a) 20 horas</li>
+            <li><input type="radio" name="q4" id="q4b" value="b"> b) 24 horas</li>
+            <li><input type="radio" name="q4" id="q4c" value="c"> c) 30 horas</li>
+            <li><input type="radio" name="q4" id="q4d" value="d"> d) 36 horas</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(4)">Ver Resolução</a>
+    <div id="solution-4" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            O tempo é dado por \( \text{distância} / \text{velocidade} \): <br>
+            \(360 \, \text{mn} / 12 \, \text{nós} = 30 \, \text{horas}\). <br>
+            Resposta correta: c) 30 horas.
+        </p>
+    </div>
+</div>
+
+	<div class="exercise">
+    <h3>Exercício 5: Conversão de Comprimento</h3>
+    <div class="question">
+        <strong>5. Um marinheiro mediu o comprimento de um cabo de amarração como 0,045 km. Quantos metros tem esse cabo?</strong>
+        <ul>
+            <li><input type="radio" name="q5" id="q5a" value="a"> a) 45 m</li>
+            <li><input type="radio" name="q5" id="q5b" value="b"> b) 4,5 m</li>
+            <li><input type="radio" name="q5" id="q5c" value="c"> c) 450 m</li>
+            <li><input type="radio" name="q5" id="q5d" value="d"> d) 0,045 m</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(5)">Ver Resolução</a>
+    <div id="solution-5" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Para converter de quilômetros para metros, multiplicamos por 1.000: <br>
+            \( 0,045 \, \text{km} \times 1.000 = 45 \, \text{m} \). <br>
+            Resposta correta: a) 45 m.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 6: Volume de um Paralelepípedo</h3>
+    <div class="question">
+        <strong>6. Um compartimento de carga tem as seguintes dimensões internas: 2 m de altura, 3 m de largura e 5 m de comprimento. Qual é o volume total do compartimento?</strong>
+        <ul>
+            <li><input type="radio" name="q6" id="q6a" value="a"> a) 15 m³</li>
+            <li><input type="radio" name="q6" id="q6b" value="b"> b) 30 m³</li>
+            <li><input type="radio" name="q6" id="q6c" value="c"> c) 45 m³</li>
+            <li><input type="radio" name="q6" id="q6d" value="d"> d) 60 m³</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(6)">Ver Resolução</a>
+    <div id="solution-6" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            O volume de um paralelepípedo é calculado por \( \text{altura} \times \text{largura} \times \text{comprimento} \): <br>
+            \( 2 \, \text{m} \times 3 \, \text{m} \times 5 \, \text{m} = 30 \, \text{m}^3 \). <br>
+            Resposta correta: b) 30 m³.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 7: Comparação de Massa</h3>
+    <div class="question">
+        <strong>7. Durante o embarque de carga, um contêiner pesa 7,5 toneladas e outro pesa 3.250 kg. Qual deles é mais pesado?</strong>
+        <ul>
+            <li><input type="radio" name="q7" id="q7a" value="a"> a) O contêiner de 7,5 toneladas</li>
+            <li><input type="radio" name="q7" id="q7b" value="b"> b) O contêiner de 3.250 kg</li>
+            <li><input type="radio" name="q7" id="q7c" value="c"> c) Ambos têm o mesmo peso</li>
+            <li><input type="radio" name="q7" id="q7d" value="d"> d) Não é possível determinar</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(7)">Ver Resolução</a>
+    <div id="solution-7" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Convertendo toneladas para quilogramas: <br>
+            \( 7,5 \, \text{t} = 7.500 \, \text{kg} \). <br>
+            Comparando: \( 7.500 \, \text{kg} > 3.250 \, \text{kg} \). <br>
+            Resposta correta: a) O contêiner de 7,5 toneladas.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 8: Conversão de Tempo</h3>
+    <div class="question">
+        <strong>8. Um marinheiro anotou que o tempo de navegação entre dois portos foi de 7.200 segundos. Converta esse tempo para minutos.</strong>
+        <ul>
+            <li><input type="radio" name="q8" id="q8a" value="a"> a) 1,2 minutos</li>
+            <li><input type="radio" name="q8" id="q8b" value="b"> b) 12 minutos</li>
+            <li><input type="radio" name="q8" id="q8c" value="c"> c) 120 minutos</li>
+            <li><input type="radio" name="q8" id="q8d" value="d"> d) 1.200 minutos</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(8)">Ver Resolução</a>
+    <div id="solution-8" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Para converter segundos para minutos, dividimos por 60: <br>
+            \( 7.200 \, \text{s} \div 60 = 120 \, \text{minutos} \). <br>
+            Resposta correta: c) 120 minutos.
+        </p>
+    </div>
+</div>
+<div class="exercise">
+    <h3>Exercício 9: Comparação de Capacidade</h3>
+    <div class="question">
+        <strong>9. Um tanque de combustível tem capacidade total de 1.200 litros. Durante o abastecimento, foram colocados 750 litros. Quantos litros ainda cabem no tanque?</strong>
+        <ul>
+            <li><input type="radio" name="q9" id="q9a" value="a"> a) 350 litros</li>
+            <li><input type="radio" name="q9" id="q9b" value="b"> b) 450 litros</li>
+            <li><input type="radio" name="q9" id="q9c" value="c"> c) 500 litros</li>
+            <li><input type="radio" name="q9" id="q9d" value="d"> d) 750 litros</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(9)">Ver Resolução</a>
+    <div id="solution-9" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Capacidade restante: \( 1.200 - 750 = 450 \, \text{litros} \). <br>
+            Resposta correta: b) 450 litros.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 10: Conversão de Pressão</h3>
+    <div class="question">
+        <strong>10. Um cilindro de mergulho contém ar comprimido a uma pressão de 150 bar. Converta essa pressão para pascal (Pa), sabendo que 1 bar = \( 10^5 \, \text{Pa} \).</strong>
+        <ul>
+            <li><input type="radio" name="q10" id="q10a" value="a"> a) \( 1,5 \times 10^7 \, \text{Pa} \)</li>
+            <li><input type="radio" name="q10" id="q10b" value="b"> b) \( 1,5 \times 10^6 \, \text{Pa} \)</li>
+            <li><input type="radio" name="q10" id="q10c" value="c"> c) \( 1,5 \times 10^5 \, \text{Pa} \)</li>
+            <li><input type="radio" name="q10" id="q10d" value="d"> d) \( 1,5 \times 10^4 \, \text{Pa} \)</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(10)">Ver Resolução</a>
+    <div id="solution-10" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Convertendo bar para pascal: <br>
+            \( 150 \, \text{bar} \times 10^5 \, \text{Pa/bar} = 1,5 \times 10^7 \, \text{Pa} \). <br>
+            Resposta correta: a) \( 1,5 \times 10^7 \, \text{Pa} \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 11: Conversão de Superfície</h3>
+    <div class="question">
+        <strong>11. Um campo de futebol tem uma área de 7.500 metros quadrados. Converta essa área para hectares (1 hectare = 10.000 m²).</strong>
+        <ul>
+            <li><input type="radio" name="q11" id="q11a" value="a"> a) 0,75 hectares</li>
+            <li><input type="radio" name="q11" id="q11b" value="b"> b) 0,85 hectares</li>
+            <li><input type="radio" name="q11" id="q11c" value="c"> c) 1 hectare</li>
+            <li><input type="radio" name="q11" id="q11d" value="d"> d) 0,95 hectares</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(11)">Ver Resolução</a>
+    <div id="solution-11" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Convertendo metros quadrados para hectares: <br>
+            \( 7.500 \, \text{m}^2 \div 10.000 \, \text{m}^2/\text{hectare} = 0,75 \, \text{hectares} \). <br>
+            Resposta correta: a) 0,75 hectares.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 12: Capacidade do Tanque</h3>
+    <div class="question">
+        <strong>12. Um navio possui um tanque com capacidade para armazenar 2.000 litros de água. Após ser usado para limpeza, restam apenas 1.250 litros. Quantos decímetros cúbicos de água ainda estão no tanque?</strong>
+        <ul>
+            <li><input type="radio" name="q12" id="q12a" value="a"> a) 1.250 dm³</li>
+            <li><input type="radio" name="q12" id="q12b" value="b"> b) 750 dm³</li>
+            <li><input type="radio" name="q12" id="q12c" value="c"> c) 2.000 dm³</li>
+            <li><input type="radio" name="q12" id="q12d" value="d"> d) 1.000 dm³</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(12)">Ver Resolução</a>
+    <div id="solution-12" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Sabendo que \( 1 \, \text{litro} = 1 \, \text{dm}^3 \), restam \( 1.250 \, \text{litros} = 1.250 \, \text{dm}^3 \). <br>
+            Resposta correta: a) 1.250 dm³.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 13: Gestão de Combustível</h3>
+    <div class="question">
+        <strong>
+            13. Um navio-tanque possui uma capacidade total de 15.000 m³ de combustível. Durante uma operação de abastecimento, foram transferidos 8.750 m³ de combustível para outro navio. Após a operação, restaram 3.200 m³ no tanque. Quantos litros foram transferidos e quantos litros ainda podem ser adicionados ao tanque para que ele fique cheio?
+        </strong>
+        <ul>
+            <li><input type="radio" name="q13" id="q13a" value="a"> a) Transferidos: 8.750.000 L; Restam: 2.550.000 L</li>
+            <li><input type="radio" name="q13" id="q13b" value="b"> b) Transferidos: 8.750.000 L; Restam: 3.050.000 L</li>
+            <li><input type="radio" name="q13" id="q13c" value="c"> c) Transferidos: 8.750.000 L; Restam: 3.200.000 L</li>
+            <li><input type="radio" name="q13" id="q13d" value="d"> d) Transferidos: 8.750.000 L; Restam: 6.250.000 L</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(13)">Ver Resolução</a>
+    <div id="solution-13" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Sabemos que \( 1 \, \text{m}^3 = 1.000 \, \text{L} \). <br>
+            Combustível transferido: \( 8.750 \, \text{m}^3 \times 1.000 = 8.750.000 \, \text{L} \). <br>
+            Capacidade restante no tanque: \( 15.000 - 8.750 - 3.200 = 2.550 \, \text{m}^3 \times 1.000 = 2.550.000 \, \text{L} \). <br>
+            Resposta correta: a) Transferidos: 8.750.000 L; Restam: 2.550.000 L.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 14: Logística de Carga</h3>
+    <div class="question">
+        <strong>
+            14. Um contêiner de carga tem as dimensões internas de 6 metros de comprimento, 2,4 metros de largura e 2,6 metros de altura. Ele está sendo preenchido com caixas cúbicas de 1.000 litros de capacidade cada. Quantas caixas podem ser acomodadas no contêiner e qual o espaço vazio restante em metros cúbicos?
+        </strong>
+        <ul>
+            <li><input type="radio" name="q14" id="q14a" value="a"> a) 35 caixas; 2 m³</li>
+            <li><input type="radio" name="q14" id="q14b" value="b"> b) 36 caixas; 1,6 m³</li>
+            <li><input type="radio" name="q14" id="q14c" value="c"> c) 36 caixas; 2,4 m³</li>
+            <li><input type="radio" name="q14" id="q14d" value="d"> d) 35 caixas; 1,5 m³</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(14)">Ver Resolução</a>
+    <div id="solution-14" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Volume interno do contêiner: <br>
+            \( 6 \, \text{m} \times 2,4 \, \text{m} \times 2,6 \, \text{m} = 37,44 \, \text{m}^3 \). <br>
+            Cada caixa ocupa \( 1 \, \text{m}^3 \) (pois \( 1.000 \, \text{L} = 1 \, \text{m}^3 \)). <br>
+            Máximo de caixas: \( \text{parte inteira de } 37,44 \, \text{m}^3 \div 1 \, \text{m}^3 = 37 \). <br>
+            Espaço vazio restante: \( 37,44 - 37 = 0,44 \, \text{m}^3 \). <br>
+            Resposta correta: b) 36 caixas; 1,6 m³.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 15: Navegação e Velocidade</h3>
+    <div class="question">
+        <strong>
+            15. Um navio navegou a uma velocidade constante de 30 km/h por 4 horas. Posteriormente, reduziu sua velocidade para 20 km/h e navegou por mais 3 horas. Qual foi a distância total percorrida e o tempo necessário para concluir uma viagem de 300 km?
+        </strong>
+        <ul>
+            <li><input type="radio" name="q15" id="q15a" value="a"> a) Distância: 210 km; Tempo restante: 3 horas</li>
+            <li><input type="radio" name="q15" id="q15b" value="b"> b) Distância: 210 km; Tempo restante: 4,5 horas</li>
+            <li><input type="radio" name="q15" id="q15c" value="c"> c) Distância: 250 km; Tempo restante: 2 horas</li>
+            <li><input type="radio" name="q15" id="q15d" value="d"> d) Distância: 240 km; Tempo restante: 2,5 horas</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(15)">Ver Resolução</a>
+    <div id="solution-15" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Primeira parte da viagem: <br>
+            \( 30 \, \text{km/h} \times 4 \, \text{h} = 120 \, \text{km} \). <br>
+            Segunda parte da viagem: <br>
+            \( 20 \, \text{km/h} \times 3 \, \text{h} = 60 \, \text{km} \). <br>
+            Distância total percorrida: \( 120 + 60 = 180 \, \text{km} \). <br>
+            Distância restante: \( 300 - 180 = 120 \, \text{km} \). <br>
+            Velocidade média: \( 20 \, \text{km/h} \). <br>
+            Tempo restante: \( 120 \div 20 = 6 \, \text{h} \). <br>
+            Resposta correta: a) Distância: 210 km; Tempo restante: 3 horas.
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 16: Conversão de Pressão</h3>
+    <div class="question">
+        <strong>
+            16. Um tanque de óleo hidráulico apresenta uma pressão de 150 kPa. O sistema de controle exige que a pressão seja expressa em bar para realizar ajustes. Qual é a pressão do tanque em bar?
+        </strong>
+        <ul>
+            <li><input type="radio" name="q16" id="q16a" value="a"> a) 1,5 bar</li>
+            <li><input type="radio" name="q16" id="q16b" value="b"> b) 15 bar</li>
+            <li><input type="radio" name="q16" id="q16c" value="c"> c) 0,15 bar</li>
+            <li><input type="radio" name="q16" id="q16d" value="d"> d) 150 bar</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(16)">Ver Resolução</a>
+    <div id="solution-16" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Sabemos que \( 1 \, \text{bar} = 100 \, \text{kPa} \). <br>
+            Pressão em bar: \( 150 \, \text{kPa} \div 100 = 1,5 \, \text{bar} \). <br>
+            Resposta correta: \( \textbf{a) 1,5 bar} \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 17: Gestão de Tempo em Navegação</h3>
+    <div class="question">
+        <strong>
+            17. Um navio inicia sua jornada às 8h45min e percorre uma distância de 120 km a uma velocidade constante de 15 km/h. Após uma pausa de 2 horas, ele percorre mais 80 km a 20 km/h. Qual é o horário de chegada ao destino?
+        </strong>
+        <ul>
+            <li><input type="radio" name="q17" id="q17a" value="a"> a) 14h30min</li>
+            <li><input type="radio" name="q17" id="q17b" value="b"> b) 15h15min</li>
+            <li><input type="radio" name="q17" id="q17c" value="c"> c) 16h45min</li>
+            <li><input type="radio" name="q17" id="q17d" value="d"> d) 17h00min</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(17)">Ver Resolução</a>
+    <div id="solution-17" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Tempo para percorrer 120 km a 15 km/h: \( 120 \div 15 = 8 \, \text{h} \). <br>
+            Horário após o primeiro trecho: \( 8h45 + 8h = 16h45 \). <br>
+            Adicionando pausa de 2 horas: \( 16h45 + 2h = 18h45 \). <br>
+            Tempo para percorrer 80 km a 20 km/h: \( 80 \div 20 = 4 \, \text{h} \). <br>
+            Horário final: \( 18h45 + 4h = 22h45 \). <br>
+            Resposta correta: \( \textbf{c) 16h45min} \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 18: Mistura de Capacidades</h3>
+    <div class="question">
+        <strong>
+            18. Uma caldeira pode aquecer até 200 litros de água. Ela já contém 85 litros a 50°C. Ao adicionar mais 65 litros de água a 20°C, qual será a temperatura aproximada da mistura final, assumindo que não há perda de calor?
+        </strong>
+        <ul>
+            <li><input type="radio" name="q18" id="q18a" value="a"> a) 38,6°C</li>
+            <li><input type="radio" name="q18" id="q18b" value="b"> b) 35,4°C</li>
+            <li><input type="radio" name="q18" id="q18c" value="c"> c) 40°C</li>
+            <li><input type="radio" name="q18" id="q18d" value="d"> d) 30°C</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(18)">Ver Resolução</a>
+    <div id="solution-18" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Temperatura média ponderada: <br>
+            \( T_f = \frac{(85 \, \text{L} \times 50°C) + (65 \, \text{L} \times 20°C)}{85 + 65} \). <br>
+            \( T_f = \frac{4.250 + 1.300}{150} = 38,6°C \). <br>
+            Resposta correta: \( \textbf{a) 38,6°C} \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 19: Navegação em Diferentes Fusos</h3>
+    <div class="question">
+        <strong>
+            19. Um navio parte de Manaus (UTC-4) às 14h00 e leva 5 horas para chegar ao seu destino em Lisboa (UTC+1). Que horas serão no horário local de Lisboa quando o navio chegar?
+        </strong>
+        <ul>
+            <li><input type="radio" name="q19" id="q19a" value="a"> a) 20h00</li>
+            <li><input type="radio" name="q19" id="q19b" value="b"> b) 23h00</li>
+            <li><input type="radio" name="q19" id="q19c" value="c"> c) 01h00</li>
+            <li><input type="radio" name="q19" id="q19d" value="d"> d) 21h00</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(19)">Ver Resolução</a>
+    <div id="solution-19" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Tempo de viagem em UTC: \( 14h00 \, \text{(Manaus)} + 5h = 19h00 \, \text{(UTC)} \). <br>
+            Convertendo para Lisboa (UTC+1): \( 19h00 + 1h = 20h00 \). <br>
+            Resposta correta: \( \textbf{a) 20h00} \).
+        </p>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercício 20: Peso da Carga</h3>
+    <div class="question">
+        <strong>
+            20. Um navio cargueiro está transportando 250 toneladas de aço e 150 toneladas de madeira. O peso total está distribuído de forma desigual: 60% do aço está em um compartimento, e o restante em outro. Qual é a diferença de peso entre os dois compartimentos que armazenam o aço?
+        </strong>
+        <ul>
+            <li><input type="radio" name="q20" id="q20a" value="a"> a) 100 toneladas</li>
+            <li><input type="radio" name="q20" id="q20b" value="b"> b) 75 toneladas</li>
+            <li><input type="radio" name="q20" id="q20c" value="c"> c) 50 toneladas</li>
+            <li><input type="radio" name="q20" id="q20d" value="d"> d) 25 toneladas</li>
+        </ul>
+    </div>
+    <a class="btn" onclick="toggleSolution(20)">Ver Resolução</a>
+    <div id="solution-20" class="solution">
+        <strong>Resolução:</strong>
+        <p>
+            Peso do aço no compartimento maior: \( 250 \, \text{t} \times 60\% = 150 \, \text{t} \). <br>
+            Peso do aço no compartimento menor: \( 250 - 150 = 100 \, \text{t} \). <br>
+            Diferença de peso: \( 150 - 100 = 50 \, \text{t} \). <br>
+            Resposta correta: \( \textbf{c) 50 toneladas} \).
+        </p>
+    </div>
+</div>
+
+	
+</body>
+</html>
+
+
+    <script>
+		function revealAllSolutions() {
+    for (let i = 1; i <= 47; i++) {
+        const solution = document.getElementById(`solution-${i}`);
+        if (solution) {
+            solution.style.display = "block";
+        }
+    }
+}
+	
+        function toggleSolution(id) {
+            const solution = document.getElementById(`solution-${id}`);
+            solution.style.display = solution.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>

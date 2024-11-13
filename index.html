@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trilha de Aprendizado</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        /* Menu lateral */
+        .sidebar {
+            width: 250px;
+            background-color: #0056b3;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            transition: width 0.3s;
+        }
+
+        .sidebar.collapsed {
+            width: 50px;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #003d82;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            transition: opacity 0.3s;
+        }
+
+        .sidebar.collapsed h2 {
+            opacity: 0;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            padding: 15px;
+            cursor: pointer;
+            border-bottom: 1px solid #004080;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: padding-left 0.3s;
+        }
+
+        .sidebar.collapsed li {
+            padding-left: 10px;
+        }
+
+        .sidebar li:hover {
+            background-color: #003d82;
+        }
+
+        .submenu {
+            display: none;
+            background-color: #004080;
+        }
+
+        .submenu li {
+            padding: 10px;
+            padding-left: 30px;
+        }
+
+        .submenu li:hover {
+            background-color: #003060;
+        }
+
+        .active {
+            display: block;
+        }
+
+        /* Botão de encolher/expandir */
+        .toggle-btn {
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            position: absolute;
+            left: 250px;
+            top: 10px;
+            transition: left 0.3s;
+        }
+
+        .collapsed + .toggle-btn {
+            left: 50px;
+        }
+
+        /* Conteúdo central */
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: #ffffff;
+            overflow-y: auto;
+            transition: margin-left 0.3s;
+        }
+
+        .content h1 {
+            color: #0056b3;
+        }
+
+        .iframe-container {
+            border: none;
+            width: 100%;
+            height: 80vh;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menu Lateral -->
+    <div class="sidebar" id="sidebar">
+        <h2>Trilha de Aprendizado</h2>
+        <ul>
+            <li onclick="toggleSubmenu('modulo0')">Módulo 00: Números</li>
+            <ul id="modulo0" class="submenu">
+                <li onclick="loadContent('modulo00_conteudo.html')">Conteúdo</li>
+                <li onclick="loadContent('modulo00_exercicios.html')">Exercícios de Exemplo</li>
+                <li onclick="loadContent('modulo00_avaliacao.html')">Avaliação</li>
+                <li onclick="loadContent('modulo00_complementar.html')">Material Complementar</li>
+            </ul>
+            <li onclick="toggleSubmenu('modulo1')">Módulo 1: Números Decimais</li>
+            <ul id="modulo1" class="submenu">
+                <li onclick="loadContent('modulo01_conteudo.html')">Conteúdo</li>
+                <li onclick="loadContent('modulo01_exercicios.html')">Exercícios de Exemplo</li>
+                <li onclick="loadContent('modulo01_avaliacao.html')">Avaliação</li>
+                <li onclick="loadContent('modulo01_complementar.html')">Material Complementar</li>
+            </ul>
+            <li onclick="toggleSubmenu('modulo2')">Módulo 2: Números Inteiros</li>
+            <ul id="modulo2" class="submenu">
+                <li onclick="loadContent('modulo02_conteudo.html')">Conteúdo</li>
+                <li onclick="loadContent('modulo02_exercicios.html')">Exercícios de Exemplo</li>
+                <li onclick="loadContent('modulo02_avaliacao.html')">Avaliação</li>
+                <li onclick="loadContent('modulo02_complementar.html')">Material Complementar</li>
+            </ul>
+            <li onclick="toggleSubmenu('modulo3')">Módulo 3: Números Inteiros (Positivos e Negativos)</li>
+            <ul id="modulo3" class="submenu">
+                <li onclick="loadContent('modulo03_conteudo.html')">Conteúdo</li>
+                <li onclick="loadContent('modulo03_exercicios.html')">Exercícios de Exemplo</li>
+                <li onclick="loadContent('modulo03_avaliacao.html')">Avaliação</li>
+                <li onclick="loadContent('modulo03_complementar.html')">Material Complementar</li>
+            </ul>
+            <li onclick="toggleSubmenu('modulo4')">Módulo 4: Frações</li>
+            <ul id="modulo4" class="submenu">
+                <li onclick="loadContent('modulo04_conteudo.html')">Conteúdo</li>
+                <li onclick="loadContent('modulo04_exercicios.html')">Exercícios de Exemplo</li>
+                <li onclick="loadContent('modulo04_avaliacao.html')">Avaliação</li>
+                <li onclick="loadContent('modulo04_complementar.html')">Material Complementar</li>
+            </ul>
+            <li onclick="toggleSubmenu('modulo5')">Módulo 5: Unidades de Medidas</li>
+            <ul id="modulo5" class="submenu">
+                <li onclick="loadContent('modulo05_conteudo.html')">Conteúdo</li>
+                <li onclick="loadContent('modulo05_exercicios.html')">Exercícios de Exemplo</li>
+                <li onclick="loadContent('modulo05_avaliacao.html')">Avaliação</li>
+                <li onclick="loadContent('modulo05_complementar.html')">Material Complementar</li>
+            </ul>
+            <li onclick="toggleSubmenu('modulo6')">Módulo 6: Geometria</li>
+            <ul id="modulo6" class="submenu">
+                <li onclick="loadContent('modulo06'_conteudo.html')">Conteúdo</li>
+                <li onclick="loadContent('modulo06_exercicios.html')">Exercícios de Exemplo</li>
+                <li onclick="loadContent('modulo06_avaliacao.html')">Avaliação</li>
+                <li onclick="loadContent('modulo06_complementar.html')">Material Complementar</li>
+            </ul>
+            <li onclick="toggleSubmenu('modulo7')">Módulo 7: Potenciação e radiciação:</li>
+            <ul id="modulo7" class="submenu">
+                <li onclick="loadContent('modulo07'_conteudo.html')">Conteúdo</li>
+                <li onclick="loadContent('modulo07_exercicios.html')">Exercícios de Exemplo</li>
+                <li onclick="loadContent('modulo07_avaliacao.html')">Avaliação</li>
+                <li onclick="loadContent('modulo07_complementar.html')">Material Complementar</li>
+            </ul>
+            <li onclick="toggleSubmenu('modulo8')">Módulo 8: – Equação de 1o grau</li>
+            <ul id="modulo8" class="submenu">
+                <li onclick="loadContent('modulo08'_conteudo.html')">Conteúdo</li>
+                <li onclick="loadContent('modulo08_exercicios.html')">Exercícios de Exemplo</li>
+                <li onclick="loadContent('modulo08_avaliacao.html')">Avaliação</li>
+                <li onclick="loadContent('modulo08_complementar.html')">Material Complementar</li>
+            </ul>
+            <li onclick="toggleSubmenu('modulo9')">Módulo 9: – Porcentagem:</li>
+            <ul id="modulo9" class="submenu">
+                <li onclick="loadContent('modulo09'_conteudo.html')">Conteúdo</li>
+                <li onclick="loadContent('modulo09_exercicios.html')">Exercícios de Exemplo</li>
+                <li onclick="loadContent('modulo09_avaliacao.html')">Avaliação</li>
+                <li onclick="loadContent('modulo09_complementar.html')">Material Complementar</li>
+            </ul>			
+        </ul>
+    </div>
+
+    <!-- Botão para encolher/expandir -->
+    <button class="toggle-btn" id="toggleBtn" onclick="toggleSidebar()"><<</button>
+
+    <!-- Área de Conteúdo -->
+    <div class="content" id="content">
+        <h1>                   Bem-vindo à Trilha de Aprendizado</h1>
+        <p>                    Selecione um módulo no menu à esquerda para começar a explorar o conteúdo.</p>
+        <iframe id="contentFrame" class="iframe-container"></iframe>
+    </div>
+
+    <script>
+        // Função para exibir ou ocultar os submenus
+        function toggleSubmenu(id) {
+            const submenu = document.getElementById(id);
+            submenu.classList.toggle('active');
+        }
+
+        // Função para carregar o conteúdo no iframe
+        function loadContent(page) {
+            document.getElementById('contentFrame').src = page;
+        }
+
+        // Função para encolher/expandir o menu lateral
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const content = document.getElementById('content');
+            const toggleBtn = document.getElementById('toggleBtn');
+            sidebar.classList.toggle('collapsed');
+            if (sidebar.classList.contains('collapsed')) {
+                toggleBtn.textContent = ">>";
+            } else {
+                toggleBtn.textContent = "<<";
+            }
+        }
+    </script>
+</body>
+</html>
